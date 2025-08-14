@@ -7,7 +7,7 @@ estudante1.Sexo = Console.ReadLine();
 estudante1.Aprovado = Convert.ToChar(Console.ReadLine());
 
 Curso resultadoEstudante1 = new();
-resultadoEstudante1.Resultado(estudante1.Nome, estudante1.Idade, estudante1.Sexo, estudante1.Aprovado);
+resultadoEstudante1.Resultado(estudante1);
 Console.ReadLine();
 
 public class Aluno()
@@ -20,10 +20,11 @@ public class Aluno()
 
 public class Curso()
 {
-    public void Resultado(string nome, int idade, string sexo, char aprovado)
+    public void Resultado(Aluno estudante)  //O método espera receber como parâmetro um objeto do tipo Aluno
     {
-        Console.WriteLine($"\nO aluno {nome} de {idade} anos do sexo {sexo}");
-        if(aprovado == 'S')
+        //Essa tática evita a estação prolonga da lista de parâmetros no método
+        Console.WriteLine($"\nO aluno {estudante.Nome} de {estudante.Idade} anos do sexo {estudante.Sexo}"); //A operação acesso os atributos do objeto definido no parâmetro do método
+        if(estudante.Aprovado == 'S')
         {
             Console.WriteLine("\nFoi aprovado");
         }

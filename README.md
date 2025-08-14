@@ -27,4 +27,14 @@ p2.idade = 25;
 
 Quando um objetó é criado, a "variável" que o referencia é armazenada na memória stack, enquanto o objeto em si é alocado na memória heap. Isso significa que a variável contém uma referência ao objeto, e não o objeto em si. Quando você cria um novo objeto, a memória heap é alocada para armazenar os dados do objeto, enquanto a variável na stack aponta para essa localização na heap. <br> Em função disso, se atribuirmos um objeto a outro, ambos apontarão para o mesmo local na memória heap. 
 
-        
+## Construtores
+
+Tratam-se de tipos especiais de métodos que são automaticamente chamados quando um objeto é instanciado, ou seja, quando um objeto é criado com o operador `new()`. Eles são utilizados para inicializar os atributos do objeto e podem receber parâmetros para definir valores iniciais. <br> Se nenhum construtor for definido, o compilador cria um construtor padrão sem parâmetros. <br>
+Construtores possuem uma estrutura característica : 
+- O nome do construtor deve ser o mesmo nome da classe;
+- Não possuem tipo de retorno, nem mesmo `void`;
+- Podem receber parâmetros para inicializar os atributos do objeto;
+
+- É possíve criar múltiplos construtores na mesma classe, desde que tenham assinaturas diferentes (número ou tipos de parâmetros diferentes). Isso é conhecido como sobrecarga de construtores. <br>
+- **Quando resolve se instaciar um objeto utilizando determinado construtor, os atributos daquele construtor utilizados são inicialozados com os valores passados como parâmetro, enquanto os atributos não utilizados são inicializados com seus valores padrão.** <br>
+- Também é possível chamar um construtor dentro de um construtor, ao utilizar o operador `this` + o nome do atributo desejado, que deve estar presente nos parâmetros do construtor principal
