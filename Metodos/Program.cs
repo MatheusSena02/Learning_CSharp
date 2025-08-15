@@ -1,7 +1,6 @@
 ﻿//Declaração de Métodos em uma clase
 
 CadastroBancario cliente = new CadastroBancario();
-cliente.inicializacaoDoServico();
 
 
 class CadastroBancario
@@ -12,7 +11,7 @@ class CadastroBancario
     string? agencia;
     char? opcao;
 
-    public void inicializacaoDoServico()
+    public CadastroBancario()
     {
         do
         {
