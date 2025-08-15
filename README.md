@@ -38,3 +38,14 @@ Construtores possuem uma estrutura característica :
 - É possíve criar múltiplos construtores na mesma classe, desde que tenham assinaturas diferentes (número ou tipos de parâmetros diferentes). Isso é conhecido como sobrecarga de construtores. <br>
 - **Quando resolve se instaciar um objeto utilizando determinado construtor, os atributos daquele construtor utilizados são inicialozados com os valores passados como parâmetro, enquanto os atributos não utilizados são inicializados com seus valores padrão.** <br>
 - Também é possível chamar um construtor dentro de um construtor, ao utilizar o operador `this` + o nome do atributo desejado, que deve estar presente nos parâmetros do construtor principal
+
+
+## Palavra `this`
+
+É um operador que faz referência ao objeto atual. Ele é frequentemente utilizado dentro de métodos e construtores para acessar os atributos e métodos do próprio objeto, especialmente quando há ambiguidade entre nomes de parâmetros e atributos da classe. <br> Por exemplo, em um construtor, se um parâmetro tem o mesmo nome que um atributo da classe, o operador `this` pode ser usado para diferenciar entre o parâmetro e o atributo.
+
+### Casos de uso da palavra `this`:
+
+- Acessar atributos e métodos do objeto atual;
+- Passar o objeto atual como parâmetro para outros métodos ou construtores;
+- Invocar outro construtor da mesma classe (construtor sobrecarregado);
