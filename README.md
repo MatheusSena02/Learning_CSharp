@@ -49,3 +49,17 @@ Construtores possuem uma estrutura característica :
 - Acessar atributos e métodos do objeto atual;
 - Passar o objeto atual como parâmetro para outros métodos ou construtores;
 - Invocar outro construtor da mesma classe (construtor sobrecarregado);
+
+## Assinatura de um método 
+
+Trata-se de uma identificação exclusiva de um método para o compilador, em que dois métodos não podem possuir a mesma assinatura. <br>
+**A assinatura de um método é constituída por** :
+- O nome do método;
+- A quantidade de parâmetros e seus tipos;
+- A ordem dos parâmetros;
+
+**O tipo de retorno do método NÂO faz parte da assinatura.** 
+
+### Sobrecarga de Métodos
+
+Quando fazemos uso de métodos com mesmo nome, mas com assinaturas diferentes, chamamos isso de sobrecarga de métodos. Isso permite que você tenha métodos com o mesmo nome, mas que realizam tarefas diferentes com base nos tipos ou na quantidade de parâmetros passados. <br> A sobrecarga de métodos é uma forma de **polimorfismo**, onde o mesmo nome de método pode se comportar de maneiras diferentes dependendo dos argumentos fornecidos.
