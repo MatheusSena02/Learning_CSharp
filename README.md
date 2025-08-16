@@ -1,4 +1,4 @@
-﻿﻿# Tipos de Dados 
+﻿# Tipos de Dados
 
 ## `Dados de Referência x Dados de Valor`
 

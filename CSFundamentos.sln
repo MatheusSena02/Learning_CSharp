@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiposDateTime", "TiposDateTime\TiposDateTime.csproj", "{423A2580-43DD-408B-95A0-1703F1055F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "NullableTypes\NullableTypes.csproj", "{EB518108-F235-444E-898F-40D77021E74B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversaoDeTipos", "ConversaoDeTipos\ConversaoDeTipos.csproj", "{D0489935-CB3B-4B1E-A320-A33DA892DC9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntradaDeDados", "EntradaDeDados\EntradaDeDados.csproj", "{5E0EFDA6-BDFC-479C-91EB-E30C7AD6DCF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constantes", "Constantes\Constantes.csproj", "{DEE644AA-9182-40FE-85CA-07B0B8CBB573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableReferenceTypes", "NullableReferenceTypes\NullableReferenceTypes.csproj", "{FA15C4C4-4383-4190-BD14-7D588CA70A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperadorTernario", "OperadorTernario\OperadorTernario.csproj", "{5A9B33E5-8930-4561-8C2B-4F4CB2BFF22F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{423A2580-43DD-408B-95A0-1703F1055F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423A2580-43DD-408B-95A0-1703F1055F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423A2580-43DD-408B-95A0-1703F1055F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423A2580-43DD-408B-95A0-1703F1055F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB518108-F235-444E-898F-40D77021E74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB518108-F235-444E-898F-40D77021E74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB518108-F235-444E-898F-40D77021E74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB518108-F235-444E-898F-40D77021E74B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0489935-CB3B-4B1E-A320-A33DA892DC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0489935-CB3B-4B1E-A320-A33DA892DC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0489935-CB3B-4B1E-A320-A33DA892DC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0489935-CB3B-4B1E-A320-A33DA892DC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E0EFDA6-BDFC-479C-91EB-E30C7AD6DCF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0EFDA6-BDFC-479C-91EB-E30C7AD6DCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0EFDA6-BDFC-479C-91EB-E30C7AD6DCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0EFDA6-BDFC-479C-91EB-E30C7AD6DCF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE644AA-9182-40FE-85CA-07B0B8CBB573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE644AA-9182-40FE-85CA-07B0B8CBB573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE644AA-9182-40FE-85CA-07B0B8CBB573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE644AA-9182-40FE-85CA-07B0B8CBB573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA15C4C4-4383-4190-BD14-7D588CA70A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA15C4C4-4383-4190-BD14-7D588CA70A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA15C4C4-4383-4190-BD14-7D588CA70A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA15C4C4-4383-4190-BD14-7D588CA70A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A9B33E5-8930-4561-8C2B-4F4CB2BFF22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9B33E5-8930-4561-8C2B-4F4CB2BFF22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9B33E5-8930-4561-8C2B-4F4CB2BFF22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9B33E5-8930-4561-8C2B-4F4CB2BFF22F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6FBB111-F35C-4D0D-AA05-5C0A7B91325C}
+	EndGlobalSection
+EndGlobal
