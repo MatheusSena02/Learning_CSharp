@@ -113,3 +113,7 @@ Quando o método termina, ele devolve o papel preenchido para você usar.
 - Resumo
 
 O parâmetro `out` é útil para retornar múltiplos valores de um método, garantindo que a variável será inicializada dentro do método e estará disponível no escopo principal após a chamada.
+
+## Argumentos Nomeados
+Os `Argumentos Nomeados` permitem que você especifique o nome dos parâmetros ao chamar um método, sem precisar respeitar a ordenação dos parâmetros, tornando mais claro qual valor está sendo passado para qual parâmetro. Isso é especialmente útil quando um método tem muitos parâmetros ou quando você deseja passar apenas alguns deles. <br> Para utilizar argumentos nomeados, basta especificar o nome do parâmetro seguido de dois pontos `:` e o valor desejado.
+```csharp

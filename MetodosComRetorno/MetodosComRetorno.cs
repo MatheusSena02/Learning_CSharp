@@ -25,8 +25,5 @@ namespace MetodosComRetorno
             return x % y;
         }
 
-
-
-
     }
 }
