@@ -63,3 +63,16 @@ Trata-se de uma identificação exclusiva de um método para o compilador, em que d
 ### Sobrecarga de Métodos
 
 Quando fazemos uso de métodos com mesmo nome, mas com assinaturas diferentes, chamamos isso de sobrecarga de métodos. Isso permite que você tenha métodos com o mesmo nome, mas que realizam tarefas diferentes com base nos tipos ou na quantidade de parâmetros passados. <br> A sobrecarga de métodos é uma forma de **polimorfismo**, onde o mesmo nome de método pode se comportar de maneiras diferentes dependendo dos argumentos fornecidos.
+
+## Passagem de Argumentos
+
+### Passagem de Argumentos por Valor
+
+Uma cópia do valor do argumento é feita e passada para o método. Isso significa que qualquer modificação feita no parâmetro dentro do método não afeta o valor original fora do método. <br> Em C#, tipos primitivos (como `int`, `float`, `char`, etc.) são passados por valor por padrão.
+
+### Passagem de Argumentos por Referência
+
+Passa a referência ao mesmo local de memória dos argumentos para os parâmetros, ou seja, nenhuma cópia é feita. Isso significa que qualquer modificação feita no parâmetro dentro do método afeta o valor original fora do método. <br> Em C#, tipos de referência (como objetos e arrays) são passados por referência por padrão.
+Utiliza-se os modificadores `ref` ou `out` para indicar que um parâmetro deve ser passado por referência.
+
+
