@@ -95,7 +95,8 @@ Console.WriteLine($"Perímetro da Circunferência : {circunferencia}");
 Console.WriteLine($"Área da Circunferência : {area}");
 //Permite que a variável 'area' seja usada fora do método 'CalculaAreaPerimetro'.
 ```
-	1. O compilador cria a variável `area` no escopo do método chamador.
+
+1. O compilador cria a variável `area` no escopo do método chamador.
 2. Ele passa uma referência dessa variável para o método chamado.
 3. O método escreve o valor na memória dessa variável.
 4. Ao retornar, você pode usar `area` normalmente.

@@ -1,15 +1,20 @@
 ﻿using System;
 
-namespace Montadora 
-{ 
+namespace Montadora
+{
     public class Carro
     {
         public string? modelo;
         public string? montadora;
         public string? marca;
-        public int? ano;
-        public int? potencia;
+        public int ano;
+        public int potencia;
 
+        public Carro(string Modelo, string Montadora)
+        {
+            modelo = Modelo;
+            montadora = Montadora;
+        }
         public Carro(string modelo, string montadora, string marca, int ano, int potencia)
         {
             this.modelo = modelo;
@@ -32,6 +37,26 @@ namespace Montadora
             Console.WriteLine($"Potência : {veiculo.potencia}");
         }
 
+        public double VelocidadeMaxima(Carro veiculo)
+        {
+            return this.potencia * 1.75;
+        }
+
+        public int AumentarPotencia(int potencia)
+        {
+            return potencia += 3;
+        }
+
+        public int AumentarPotencia(ref int potencia)
+        {
+            return potencia += 5;
+        }
+
+        public int AumentaPotenciaVelocidade(Carro carro, out double velocidade)
+        {
+            velocidade = carro.potencia * 1.75;
+            return carro.potencia += 7;
+        }
     }
 }
 

@@ -12,4 +12,4 @@ Console.WriteLine($"Perímetro da Circunferência : {circunferencia}");
 Console.WriteLine($"Área da Circunferência : {area}");
 //Permite que a variável 'area' seja usada fora do método 'CalculaAreaPerimetro'.
 
-Console.ReadKey();
+Console.ReadKey();  
