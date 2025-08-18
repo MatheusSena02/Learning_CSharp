@@ -7,7 +7,7 @@ namespace Calculo
         public Calculadora(int y)
         {
             y *= 10;
-            Console.WriteLine("Valor de X ´durante a operação : " + y);
+            Console.WriteLine("Valor de X durante a operação : " + y);
         }
     }
 }

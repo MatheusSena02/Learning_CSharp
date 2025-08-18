@@ -75,4 +75,40 @@ Uma cópia do valor do argumento é feita e passada para o método. Isso significa 
 Passa a referência ao mesmo local de memória dos argumentos para os parâmetros, ou seja, nenhuma cópia é feita. Isso significa que qualquer modificação feita no parâmetro dentro do método afeta o valor original fora do método. <br> Em C#, tipos de referência (como objetos e arrays) são passados por referência por padrão.
 Utiliza-se os modificadores `ref` ou `out` para indicar que um parâmetro deve ser passado por referência.
 
+- #### Modificador `ref`
+Utilizado para passar um argumento por referência, permitindo que o método modifique o valor do argumento original. O parâmetro deve ser inicializado antes de ser passado para o método.
 
+- #### Modificador `out`
+Diferente do `ref`, o modificador `out` transfere dados para fora do método, enquanto o `ref` transfere dados de fora para dentro do método, permitindo inclusive que haja mais de um retorno pelo método. Além disso, não requer que o parâmetro seja inicializado antes de ser passado para o método. <br>
+```csharp
+using MedidasCirculares;
+
+Console.WriteLine("Informações do Círculo");
+Console.Write("Digite o raio do círculo: ");
+double raio = Convert.ToDouble(Console.ReadLine());
+
+Circulo circulo = new Circulo();
+
+double circunferencia = circulo.CalculaAreaPerimetro(raio, out double area);
+
+Console.WriteLine($"Perímetro da Circunferência : {circunferencia}");
+Console.WriteLine($"Área da Circunferência : {area}");
+//Permite que a variável 'area' seja usada fora do método 'CalculaAreaPerimetro'.
+```
+	1. O compilador cria a variável `area` no escopo do método chamador.
+2. Ele passa uma referência dessa variável para o método chamado.
+3. O método escreve o valor na memória dessa variável.
+4. Ao retornar, você pode usar `area` normalmente.
+
+- Analogia
+
+Pense no `out` como entregar um papel em branco para o método preencher.  
+Quando o método termina, ele devolve o papel preenchido para você usar.
+
+- **Observação importante**
+
+ Se você tentar usar `area` antes da chamada do método, o compilador não permite, pois ela só é inicializada dentro do método.
+
+- Resumo
+
+O parâmetro `out` é útil para retornar múltiplos valores de um método, garantindo que a variável será inicializada dentro do método e estará disponível no escopo principal após a chamada.
