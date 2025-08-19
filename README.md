@@ -123,3 +123,7 @@ Os `Parâmetros Opcionais` permitem que você defina valores padrão para parâmetro
 <br>	`Os parâmetros opcionais devem aparecer após todos os parâmetros necessários. E apenas aceitam valores constantes`
 
 ## Métodos Estáticos
+
+Os métodos estáticos pertecem à classe, ao invés do objeto, ou seja, são métodos que *não* dependem de um objeto, não dependem da criação de uma instância da classe para serem acessados. <br>
+Como o método estático não possui ligação com o objeto, ele não pode acessar diretamente os atributos de instância (não estáticos) da classe. No entanto, ele pode acessar outros métodos estáticos e atributos estáticos da mesma classe.
+Esses métodos podem ser acessados refereniando a classe, aplicando o operador `.` seguido do nome do método. 
