@@ -142,3 +142,11 @@ Semelhantemente ao construtor padrão, o construtor estático é chamado automatica
 - Só pode haver um construtor estático por classe;
 - Não pode ser chamado explicitamente, é invocado automaticamente pelo runtime;
 - Se um construtor estático gerar uma exceção, a classe não poderá ser usada, e o construtor não será chamado novamente em futuras tentativas de uso da classe.
+
+## Propriedades
+
+Até então, todos os programas foram construídas com atributos públicos, o que não é uma boa prática de programação, pois permite acesso direto aos dados do objeto. As `Propriedades` são uma forma de encapsular os atributos, permitindo o controle sobre como os dados são acessados e modificados. <br> Elas consistem em métodos especiais chamados `get` e `set`, que permitem ler e escrever valores de atributos de forma controlada. <br>
+Uma propriedade é uma combinação de um campo privado e dois acessadores : get e set. Normalmente, o campo privado é um campo oculto gerado pelo compilador tendo um campo público como interface para acesso externo, quase como se o compilador usasse o atributo público como máscara para esconder as operações no campo privado.
+
+### get e set 
+get é utilizado para ler o valor de uma propriedade, enquanto set é utilizado para atribuir um valor a ela. <br> A propriedade pode ser definida como somente leitura (apenas get) ou somente gravação (apenas set), dependendo das necessidades da classe.
