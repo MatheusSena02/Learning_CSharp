@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassandoParametros", "Passa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SobrecargaDeMetodos", "SobrecargaDeMetodos\SobrecargaDeMetodos.csproj", "{893A3E78-5F80-C672-77DD-C8EA32471B80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamposEstaticos", "CamposEstaticos\CamposEstaticos.csproj", "{D8DD8C1F-3DDA-41B4-917C-6F1DEC5E3109}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{893A3E78-5F80-C672-77DD-C8EA32471B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{893A3E78-5F80-C672-77DD-C8EA32471B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{893A3E78-5F80-C672-77DD-C8EA32471B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DD8C1F-3DDA-41B4-917C-6F1DEC5E3109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DD8C1F-3DDA-41B4-917C-6F1DEC5E3109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DD8C1F-3DDA-41B4-917C-6F1DEC5E3109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DD8C1F-3DDA-41B4-917C-6F1DEC5E3109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

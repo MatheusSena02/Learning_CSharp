@@ -1,12 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CamposEstaticos
 {
-    internal class Class1
+    public class Class1
     {
+        public int Conta;
+        public string? Nome;
+        public static float Juros;
+
+        public float JurosAnual()
+        {
+            return Juros * 12;
+        }
+
+
     }
 }
