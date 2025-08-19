@@ -121,3 +121,5 @@ Os `Argumentos Nomeados` permitem que você especifique o nome dos parâmetros ao 
 
 Os `Parâmetros Opcionais` permitem que você defina valores padrão para parâmetros em um método, tornando-os opcionais ao chamar o método. Se o parâmetro não for fornecido na chamada, o valor padrão será utilizado. Isso é útil para simplificar chamadas de métodos quando alguns parâmetros têm valores comuns ou padrão. <br> Para definir um parâmetro opcional, basta atribuir um valor padrão ao parâmetro na definição do método.
 <br>	`Os parâmetros opcionais devem aparecer após todos os parâmetros necessários. E apenas aceitam valores constantes`
+
+## Métodos Estáticos
