@@ -116,3 +116,8 @@ O parâmetro `out` é útil para retornar múltiplos valores de um método, garantind
 
 ## Argumentos Nomeados
 Os `Argumentos Nomeados` permitem que você especifique o nome dos parâmetros ao chamar um método, sem precisar respeitar a ordenação dos parâmetros, tornando mais claro qual valor está sendo passado para qual parâmetro. Isso é especialmente útil quando um método tem muitos parâmetros ou quando você deseja passar apenas alguns deles. <br> Para utilizar argumentos nomeados, basta especificar o nome do parâmetro seguido de dois pontos `:` e o valor desejado.
+
+## Parâmetros Opcionais
+
+Os `Parâmetros Opcionais` permitem que você defina valores padrão para parâmetros em um método, tornando-os opcionais ao chamar o método. Se o parâmetro não for fornecido na chamada, o valor padrão será utilizado. Isso é útil para simplificar chamadas de métodos quando alguns parâmetros têm valores comuns ou padrão. <br> Para definir um parâmetro opcional, basta atribuir um valor padrão ao parâmetro na definição do método.
+		<br>	`Os parâmetros opcionais devem aparecer após todos os parâmetros necessários`

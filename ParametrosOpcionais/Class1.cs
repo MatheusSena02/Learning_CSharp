@@ -1,8 +1,13 @@
 ﻿using System;
 
-public class Class1
+namespace ParametrosOpcionais
 {
-	public Class1()
-	{
-	}
+    public class Class1
+    {
+        public Class1(string nome,string boasVindas = "Seja bem-vindo(a)! \n" )
+        {
+            Console.WriteLine(boasVindas + nome);
+
+        }
+    }
 }
