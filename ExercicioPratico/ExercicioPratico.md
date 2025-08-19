@@ -22,3 +22,6 @@
 ### 18. Crie um campo estático ValorIpva do tipo double que vai definir o valor percentual do IPVA cobrado para todos os carros
 ### 19. Crie um método estático ObterValorIPVA que atribua o valor 4 ao campo ValorIpva
 ### 20. Acesse o valor do campo ValorIpva e exiba no console. Explique o comportamento da palavra-chave static.
+### 21. Substituir na classe Carro o campo Ano por uma propriedade de mesmo nome e mesmo tipo.
+### 22. Validar a informação do Ano de forma que se o ano informado for menor que 2000 seja atribuído 2000 e se for informado maior que 2022 seja atribuído 2022 ao valor do ano.
+### 23. Explicar a diferença entre campo e propriedade

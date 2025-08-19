@@ -7,7 +7,23 @@ namespace Montadora
         public string? modelo;
         public string? montadora;
         public string? marca;
-        public int ano;
+        private int Ano;
+        public int ano
+        {
+            get { return Ano; }
+            set { if(value < 2000)
+                {
+                    Ano = 2000;
+                }else if (value > 2022)
+                {
+                    Ano = 2022;
+                }
+                else
+                {
+                    Ano = value;
+                }
+            }
+        }
         public int potencia;
         int anoAtual = DateTime.Now.Year;
         public static double valorIpva;
