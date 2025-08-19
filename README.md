@@ -132,3 +132,13 @@ Esses métodos podem ser acessados refereniando a classe, aplicando o operador `.
 
 Semelhantemente aos métodos estáticos, os campos estáticos não pertecem a instância da classe, mas sim à própria classe em si, então são variáveis que serão de "comum uso a todos". <br>
 Isso quer dizer que, ao invés de cada instância de uma classe ter sua própria cópia de um campo, todas as instâncias compartilham a mesma cópia do campo estático. <br>
+
+### Construtor Estático
+
+Semelhantemente ao construtor padrão, o construtor estático é chamado automaticamente quando a classe é carregada pela primeira vez, antes de qualquer instância ser criada ou qualquer membro estático ser acessado. <br> Ele é usado para inicializar campos estáticos ou executar qualquer configuração necessária para a classe como um todo
+
+#### Características do Construtor Estático:
+- Não pode receber parâmetros;
+- Só pode haver um construtor estático por classe;
+- Não pode ser chamado explicitamente, é invocado automaticamente pelo runtime;
+- Se um construtor estático gerar uma exceção, a classe não poderá ser usada, e o construtor não será chamado novamente em futuras tentativas de uso da classe.
