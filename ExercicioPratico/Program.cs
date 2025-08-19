@@ -20,4 +20,7 @@ Carro novaVelocidadePotencia = new("Sedan", "Chevrolet", "Onix", 2016, 110);
 novaVelocidadePotencia.AumentaPotenciaVelocidade(novaVelocidadePotencia, out double velocidade);
 Console.WriteLine($"Velocidade do Carro 3 : {velocidade}");
 Console.WriteLine($"Potência atualizada do Carro 3 (+7): {novaVelocidadePotencia.potencia}");
+
+Carro.ObterValorIpva();
+Console.WriteLine($"Valor do IPVA : {Carro.valorIpva}");
 Console.ReadLine();

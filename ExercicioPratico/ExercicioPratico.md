@@ -19,3 +19,6 @@
 ### 15. Crie um método chamado ExibirInfo() que retorna void e que utiliza os parâmetros : Modelo, Montadora, Marca, Potencia e Ano e que exiba as informações destes atributos no console.
 ### 16. Para este método defina o parâmetro Ano como opcional e faça duas chamadas ao método usando o conceito de argumentos nomeados não informando o ano na primeira chamada e informando o ano na segunda chamada.
 ### 17. Explique o uso do parâmetro opcional e dos argumentos nomeados
+### 18. Crie um campo estático ValorIpva do tipo double que vai definir o valor percentual do IPVA cobrado para todos os carros
+### 19. Crie um método estático ObterValorIPVA que atribua o valor 4 ao campo ValorIpva
+### 20. Acesse o valor do campo ValorIpva e exiba no console. Explique o comportamento da palavra-chave static.

@@ -10,6 +10,7 @@ namespace Montadora
         public int ano;
         public int potencia;
         int anoAtual = DateTime.Now.Year;
+        public static double valorIpva;
 
         public Carro(string Modelo, string Montadora)
         {
@@ -62,6 +63,11 @@ namespace Montadora
         {
             velocidade = carro.potencia * 1.75;
             return carro.potencia += 7;
+        }
+
+        public static void ObterValorIpva()
+        {
+            valorIpva = 4; 
         }
     }
 }
