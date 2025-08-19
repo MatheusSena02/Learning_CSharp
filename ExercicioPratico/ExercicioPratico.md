@@ -16,3 +16,6 @@
 ### 13. Crie uma sobrecarga para o método AumentarPotencia que recebe um parâmetro do tipo int por referência chamado potencia e retorna um int representando o aumento de potencia. (para aumentar a potência incremente 5 ao parâmetro recebido)
 ### 14. Crie um método AumentarPotenciaVelocidade que recebe o parâmetro int potencia e retorna um int como valor da nova potência. Neste método use parâmetro out e passe a variável velocidade e que vai retornar a nova velocidade como um double. (incremente a potência de 7 e calcule a nova velocidade multiplicando a potência por 1.75)
 ### 14. Faça a chamada ao método exibindo os valores da nova potencia e da nova velocidade e explique o comportamento do parâmetro out.
+### 15. Crie um método chamado ExibirInfo() que retorna void e que utiliza os parâmetros : Modelo, Montadora, Marca, Potencia e Ano e que exiba as informações destes atributos no console.
+### 16. Para este método defina o parâmetro Ano como opcional e faça duas chamadas ao método usando o conceito de argumentos nomeados não informando o ano na primeira chamada e informando o ano na segunda chamada.
+### 17. Explique o uso do parâmetro opcional e dos argumentos nomeados

@@ -9,6 +9,7 @@ namespace Montadora
         public string? marca;
         public int ano;
         public int potencia;
+        int anoAtual = DateTime.Now.Year;
 
         public Carro(string Modelo, string Montadora)
         {
@@ -28,13 +29,18 @@ namespace Montadora
         {
             Console.WriteLine($"Acelerando o meu {this.marca}\n");
         }
-        public void ExibirInformacoes(Carro veiculo)
+
+        public void ExibirInformacoes(string modelo, string montadora, string marca, int potencia, int ano = 0)
         {
-            Console.WriteLine($"Modelo : {veiculo.modelo}");
-            Console.WriteLine($"Montadora: {veiculo.montadora}");
-            Console.WriteLine($"Marca : {veiculo.marca}");
-            Console.WriteLine($"Ano : {veiculo.ano}");
-            Console.WriteLine($"Potência : {veiculo.potencia}");
+            if (ano == 0) 
+            {
+                ano = anoAtual;
+            }
+            Console.WriteLine($"Modelo : {modelo}");
+            Console.WriteLine($"Montadora: {montadora}");
+            Console.WriteLine($"Marca : {marca}");
+            Console.WriteLine($"Ano : {ano}");
+            Console.WriteLine($"Potência : {potencia}");
         }
 
         public double VelocidadeMaxima(Carro veiculo)
