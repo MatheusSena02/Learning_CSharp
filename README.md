@@ -150,3 +150,7 @@ Uma propriedade é uma combinação de um campo privado e dois acessadores : get e 
 
 ### get e set 
 get é utilizado para ler o valor de uma propriedade, enquanto set é utilizado para atribuir um valor a ela. <br> A propriedade pode ser definida como somente leitura (apenas get) ou somente gravação (apenas set), dependendo das necessidades da classe.
+
+## Enum
+
+Funciona como uma "struct de constates", ou seja, é um tipo de dado que permite definir um conjunto nomeado de constantes. Isso é útil para representar um conjunto fixo de valores relacionados, como dias da semana, estados de um processo, etc. <br> Se não houver um valor atribuído, o primeiro valor do enum será 0, e os demais serão incrementados a partir desse valor. <br> Os valores de um enum podem ser acessados usando o nome do enum seguido pelo operador `.` e o nome do valor desejado.
