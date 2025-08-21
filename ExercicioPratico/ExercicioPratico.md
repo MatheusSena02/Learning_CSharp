@@ -25,3 +25,10 @@
 ### 21. Substituir na classe Carro o campo Ano por uma propriedade de mesmo nome e mesmo tipo.
 ### 22. Validar a informação do Ano de forma que se o ano informado for menor que 2000 seja atribuído 2000 e se for informado maior que 2022 seja atribuído 2022 ao valor do ano.
 ### 23. Explicar a diferença entre campo e propriedade
+### 24. Crie uma enumeração chamada Cores em um arquivo CarroEnum.cs que defina os seguintes membros : Branco, Vermelho, Preto, Cinza, Prata e Azul
+- Inicie o valor da enumeração com 1
+- Inclua na classe Carro o campo Cor do tipo int que vai representar a cor do carro
+- Defina um menu de opções exibindo o nome da Cor e o seu valor
+- Receba a seleção do usuário em uma variável do tipo int cor que vai ser usada para atribuir ao campo Cor
+- Altere o método ExibirInfo() incluindo o parâmetro cor do tipo int como parâmetro opcional e exiba o nome da
+cor a partir do valor da Cor recebida
