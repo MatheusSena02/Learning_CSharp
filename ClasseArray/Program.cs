@@ -28,9 +28,10 @@ foreach (string s in nomes)
     Console.WriteLine(s);
 }
 
-Console.WriteLine("Localizando itens no array...");
+Console.WriteLine("Localizando itens no array (Binary Search)...");
 
-var indice = Array.BinarySearch(nomes, "Ana");
+var indice = Array.BinarySearch(nomes, "Sérgio");
+//Array desejado e o item que deseja procurar no array 
 
-Console.WriteLine("Ana está nessa posiçao na lista : " + indice);
+Console.WriteLine("Sérgio está nessa posiçao na lista : " + indice);
 Console.Read();
