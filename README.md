@@ -159,7 +159,16 @@ Funciona como uma "struct de constates", ou seja, é um tipo de dado que permite 
 # Essa sintaxe exibe o nome do atributo do atributo do Enum
 Console.WriteLine(DiasDaSemana.Segunda);
 
-# Essa
+# Essa sintaxe exibe o valor do atributo do Enum
 Console.WriteLine((int)DiasDaSemana.Segunda);
 //Exibe o "valor" do atributo do Enum
+
 ```
+
+Da mesma forma que para acessar o valor do atributo do Enum, podemos fazer o inverso, ou seja, acessar o nome do atributo a partir do valor do atributo.
+
+```csharp
+DiasDaSemana dia = (DiasDaSemana)2;
+Console.WriteLine(dia); //Exibe "Quarta"
+```
+

@@ -1,28 +1,32 @@
 ﻿using Montadora;
+using CarroEnum;
 
+int corEscolhida;
 var carro1 = new Carro("Sedan", "Chevrolet");
 var carro2 = new Carro("SUV", "Ford");
 
-Console.WriteLine($"Modelo do Carro 1 : {carro1.modelo}");
-Console.WriteLine($"Montadora do Carro 1 : {carro1.montadora}");
-Console.WriteLine($"Modelo do Carro 2 : {carro2.modelo}");
-Console.WriteLine($"Montadora do Carro 2 : {carro2.montadora}");
+Console.WriteLine($"Modelo do Carro 1 : {carro1.Modelo}");
+Console.WriteLine($"Montadora do Carro 1 : {carro1.Montadora}");
+Console.WriteLine($"Modelo do Carro 2 : {carro2.Modelo}");
+Console.WriteLine($"Montadora do Carro 2 : {carro2.Montadora}");
 
-
-var carro3 = new Carro("Sedan", "Chevrolet", "Onix", 1985, 110);
-carro3.ExibirInformacoes(carro3.modelo, carro3.montadora, carro3.marca, carro3.potencia);
-carro3.ExibirInformacoes(carro3.modelo, carro3.montadora, carro3.marca, carro3.potencia, carro3.ano);
+corEscolhida = Carro.ExibirCores();
+var carro3 = new Carro("Sedan", "Chevrolet", "Onix", 1985, 110, corEscolhida);
+carro3.ExibirInformacoes(carro3.Modelo, carro3.Montadora, carro3.Marca, carro3.Potencia, carro3.Ano, corEscolhida);
+carro3.ExibirInformacoes(carro3.Modelo, carro3.Montadora, carro3.Marca, carro3.Potencia, carro3.Ano);
 Console.WriteLine($"Velocidade Máxima do Carro 3 :{carro3.VelocidadeMaxima(carro3)}");
-Console.WriteLine($"Potência atualizada do Carro 3 (+3): {carro3.AumentarPotencia(carro3.potencia)}");
-Console.WriteLine($"Potência atualizada do Carro 3 (+5): {carro3.AumentarPotencia(ref carro3.potencia)}");
+Console.WriteLine($"Potência atualizada do Carro 3 (+3): {carro3.AumentarPotencia(carro3.Potencia)}");
+Console.WriteLine($"Potência atualizada do Carro 3 (+5): {carro3.AumentarPotencia(ref carro3.Potencia)}");
 Console.WriteLine();
 
-Carro novaVelocidadePotencia = new("Sedan", "Chevrolet", "Onix", 2050, 110);
-novaVelocidadePotencia.ExibirInformacoes(novaVelocidadePotencia.modelo, novaVelocidadePotencia.montadora, novaVelocidadePotencia.marca, novaVelocidadePotencia.potencia, novaVelocidadePotencia.ano);
+
+corEscolhida = Carro.ExibirCores();
+Carro novaVelocidadePotencia = new("Sedan", "Chevrolet", "Onix", 2050, 110, corEscolhida);
+novaVelocidadePotencia.ExibirInformacoes(novaVelocidadePotencia.Modelo, novaVelocidadePotencia.Montadora, novaVelocidadePotencia.Marca, novaVelocidadePotencia.Potencia, novaVelocidadePotencia.Ano);
 novaVelocidadePotencia.AumentaPotenciaVelocidade(novaVelocidadePotencia, out double velocidade);
 Console.WriteLine($"Velocidade do Carro 3 : {velocidade}");
-Console.WriteLine($"Potência atualizada do Carro 3 (+7): {novaVelocidadePotencia.potencia}");
+Console.WriteLine($"Potência atualizada do Carro 3 (+7): {novaVelocidadePotencia.Potencia}");
 
 Carro.ObterValorIpva();
-Console.WriteLine($"Valor do IPVA : {Carro.valorIpva}");
+Console.WriteLine($"Valor do IPVA : {Carro.ValorIpva}");
 Console.ReadLine();
