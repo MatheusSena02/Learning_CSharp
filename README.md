@@ -282,3 +282,10 @@ var tipoAnonimo = new
 	Endereco = new {Id = 1, Cidade = "Santos", Pais = "Brasil"}
 };
 ```
+
+
+## Partial Class 
+
+O modificador `partial` nos permite, basicamente, "quebrar" a definição da classe em vários arquivos. Ao invés de declarar todos os aspectos da classe em um único arquivo, podemos usar esse modificador para quebrar em vários arquivos, desde eles possuam mesmo nome e sejam identificados com o modificador `partial` <br>
+Ao final da compilação, o compilador vai combinar todos esses fragmentos da classe em uma classe só e executar o que lhe foi pedido.
+
