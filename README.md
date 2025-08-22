@@ -182,3 +182,78 @@ São palavras-chave usadas para especificar o acesso de um membro (campo, proprie
 - `protected` : Pode ser acessado por qualquer código no *assembly* no qual ele é declarado ou de uma classe derivada em outro *assembly* (Herança);
 - `file` : Restringe o escopo e a visibilidade de um tipo de nível superior ao arquivo no qual ele foi declarado; 
 
+## Tratamento de Exceção : Try / Catch
+
+As exceções que podem ocorrer em um aplicativo devem ser tratadas para evitar *travamentos* e *resultados inesperados* e continuar a execução do código, quando isso for possível.
+
+### Bloco try-catch
+
+```csharp
+
+int a = 5;
+int b = 0;
+
+try
+{
+	Console.WriteLine($"Valor : {x/y}");
+}
+catch
+{
+	Console.WriteLine("Divisão Inválida");
+}
+```
+
+É um método de código para tratamento de excessões, em que o programa tenta executar o código no bloco `try`. Caso seja internamente inválido para o compilador, ele executa o código no bloco `catch`.,
+
+### Bloco try-catch-finally
+
+```csharp
+
+int a = 5;
+int b = 0;
+
+try
+{
+	Console.WriteLine($"Valor : {x/y}");
+}
+catch
+{
+	Console.WriteLine("Divisão Inválida");
+}
+finally
+{
+	Console.WriteLine("Processamento concluído");
+}
+```
+
+Basicamente possui o mesmo comportamento que anteriormente, mas a inclusão do `finally` faz com que um escopo de código seja executado, independemente de atender as exceções ou não, ou seja, sempre será executado.
+
+### Propriedades da Exceção 
+
+|Propriedade|Tipo|Descrição|
+|-----------|----|----------|
+|Message|String|Contém uma mensagem de erro explicando a causa da exceção|
+|StackTrace|String|Contém a informação que descreve aonde a exceção ocorreu|
+|InnerException|Exception|Se a exceção foi lançada por outra exceção, esta propriedade contém a referência da antiga exceção|
+
+```csharp
+
+int a = 5;
+int b = 0;
+
+try
+{
+	Console.WriteLine($"Valor : {x/y}");
+}
+catch (Exception ex)	//Cria-se um objeto do tipo Exception para acessar as propriedades de exceções
+{
+	Console.WriteLine("Divisão Inválida");
+	Console.WriteLine($"Motivo do erro : {ex.Message}");
+	Console.WriteLine($"Onde está o erro : {ex?.StackTrace?}");
+
+}
+finally
+{
+	Console.WriteLine("Processamento concluído");
+}
+```
