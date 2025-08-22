@@ -27,6 +27,5 @@ novaVelocidadePotencia.AumentaPotenciaVelocidade(novaVelocidadePotencia, out dou
 Console.WriteLine($"Velocidade do Carro 3 : {velocidade}");
 Console.WriteLine($"Potência atualizada do Carro 3 (+7): {novaVelocidadePotencia.Potencia}");
 
-Carro.ObterValorIpva();
 Console.WriteLine($"Valor do IPVA : {Carro.ValorIpva}");
 Console.ReadLine();

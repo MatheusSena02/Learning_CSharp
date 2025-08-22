@@ -174,3 +174,11 @@ Console.WriteLine(dia); //Exibe "Quarta"
 
 ## Modificadores de Acesso
 
+São palavras-chave usadas para especificar o acesso de um membro (campo, propriedade, método, etc) ou de um tipo (classe, struct, etc).
+
+- `public` : Pode ser acessado por qualquer outro código no mesmo mesmo *assembly* ou em outro *assembly* que faz referência a ele;
+- `private`: Pode ser acessado apenas internamente na classe, ou seja, não é possível modificar o tipo ou membro a partir do objeto;
+- `internal` : Pode ser acessado por qualquer código no mesmo *assembly*, mas não de outro *assembly*;
+- `protected` : Pode ser acessado por qualquer código no *assembly* no qual ele é declarado ou de uma classe derivada em outro *assembly* (Herança);
+- `file` : Restringe o escopo e a visibilidade de um tipo de nível superior ao arquivo no qual ele foi declarado; 
+
