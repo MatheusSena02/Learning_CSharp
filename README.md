@@ -257,3 +257,28 @@ finally
 	Console.WriteLine("Processamento concluído");
 }
 ```
+
+## TIpos Anônimos
+
+Trata-se de um tipo sem nenhum nome ou identificação que pode conter apenas propriedades públicas *somente leitura*, sempre sendo alocado localmente =. O nome do tipo é gerado pelo compilador e não está disponível no código-fonte e o tipo de cada propriedade é inferido pelo compilador.
+
+```csharp
+
+var tipoAnonimo = new
+{
+	Nome = "Matheus",
+	Idade = 42
+};
+```
+
+Basicamente criamos um objeto, mas este objeto não é uma instância de qualquer classe. Não a toa ele é declarado utilizando `var`, pois o compilador vai ficar responsável por atribuir os tipos. <br> Um tipo anônimo pode ter uma propriedade de outro tipo anônimo.
+
+```csharp
+
+var tipoAnonimo = new
+{
+	Nome = "Matheus",
+	Idade = 42,
+	Endereco = new {Id = 1, Cidade = "Santos", Pais = "Brasil"}
+};
+```
