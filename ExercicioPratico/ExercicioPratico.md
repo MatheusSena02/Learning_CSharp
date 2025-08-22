@@ -32,3 +32,7 @@
 - Receba a seleção do usuário em uma variável do tipo int cor que vai ser usada para atribuir ao campo Cor
 - Altere o método ExibirInfo() incluindo o parâmetro cor do tipo int como parâmetro opcional e exiba o nome da
 cor a partir do valor da Cor recebida
+### 25. Explique como poderíamos substituir o método ObterValorIPVA() de forma a inicializar o campo estático ValorIpva quando uma instância da classe fosse criada.
+### 26. Implemente o código que realiza essa substituição
+### 27. Qual o efeito de alterar o modificador de acesso do campo estático ValorIpva de public para internal ?
+### 28. Qual o efeito de alterar o modificador de acesso do campo estático ValorIpva de public para private ?
