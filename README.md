@@ -147,8 +147,33 @@ lista.Add(true); //Count = 3 e Capacity = 4
 
 |Método|Definição|
 |-------|----------|
-|`Sort()`| Ordena os elementos do ArrayList em ordem crescente.|
+|`Sort()`| Ordena os elementos do ArrayList em ordem crescente (desde que os elementos sejam do mesmo tipo).|
 |`Reverse()`| Inverte a ordem dos elementos no ArrayList.|
 |`TrimToSize()`| Ajusta a capacidade do ArrayList para o número atual de elementos, liberando memória não utilizada.|
 |`SetRange(int index, ICollection c)`| Substitui um intervalo de elementos no ArrayList, começando no índice especificado, pelos elementos da coleção especificada.|
 |`BinarySearch(object value)`| Realiza uma busca binária por um elemento específico no ArrayList. O ArrayList deve estar ordenado para que a busca funcione corretamente.|
+
+## Coleção List < T >
+
+A classe `List<T>` é uma coleção genérica que armazena elementos de um tipo específico, definido pelo parâmetro de tipo `T`. Diferente do `ArrayList`, que armazena elementos como objetos do tipo `object`, o `List<T>` oferece melhor desempenho e segurança de tipo, pois todos os elementos na lista são do mesmo tipo. Além disso, o `List<T>` também permite que você defina a capacidade inicial da lista e pode crescer dinamicamente conforme você adiciona mais elementos.
+
+### Por que usar List<T> ao invés de ArrayList?
+
+- **Segurança de Tipo**: Com `List<T>`, você especifica o tipo de elementos que a lista pode conter, o que ajuda a evitar erros de tempo de execução relacionados a tipos incompatíveis. Com `ArrayList`, você pode adicionar qualquer tipo de objeto, o que pode levar a erros se você tentar acessar um elemento como um tipo diferente do que ele realmente é.
+- **Desempenho**: `List<T>` geralmente oferece melhor desempenho do que `ArrayList`, especialmente quando se trata de operações que envolvem muitos elementos, porque evita a necessidade de conversões de tipo (boxing e unboxing) que ocorrem com `ArrayList`.
+
+### Métodos de List < T >
+
+Os métodos disponíveis na classe `List<T>` são semelhantes aos do `ArrayList`, mas com a vantagem de serem fortemente tipados. Por exemplo : 
+
+|Método|Definição|
+|-------|----------|
+|`Add(T item)`| Adiciona um elemento do tipo T ao final da lista.|
+|`AddRange(IEnumerable<T> collection)`| Adiciona os elementos de uma coleção ao final da lista.|
+|`Insert(int index, T item)`| Insere um elemento do tipo T em uma posição específica da lista.|
+|`InsertRange(int index, IEnumerable<T> collection)`| Insere os elementos de uma coleção em uma posição específica da lista.|
+|`Remove(T item)`| Remove a primeira ocorrência de um elemento específico do tipo T da lista.|
+|`RemoveAt(int index)`| Remove o elemento na posição especificada da lista.|
+|`RemoveRange(int index, int count)`| Remove um intervalo de elementos da lista, começando no índice especificado e removendo o número especificado de elementos.|
+|`Clear()`| Remove todos os elementos da lista.|
+|`Contains(T item)`| Verifica se um elemento específico do tipo T está presente na lista.| 
