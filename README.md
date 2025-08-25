@@ -72,3 +72,83 @@ matriz[2, 2] = 9;
 ```
 
 
+## ArrayList
+
+A classe `ArrayList` é uma coleção cuja o tamanho pode ser alterado dinamicamente e que pode armazenar elementos de qualquer tipo, pois armazena os elementos como objetos do tipo `object`. Isso significa que você pode adicionar diferentes tipos de dados em um único `ArrayList` e que o tamanho do `ArrayList` pode crescer ou diminuir conforme a adição ou retirada de elementos.
+
+|Métodos|Definição|
+|-------|----------|
+|`Count`| Propriedade que retorna o número atual de elementos na coleção|
+|`Capacity`| Propriedade que retorna ou define a capacidade atual do ArrayList.|
+|`Add(object value)`| Método que adiciona um elemento ao final do ArrayList.|
+|`Remove(object value)`| Método que remove a primeira ocorrência de um elemento específico do ArrayList.|
+|`Insert(int index, object value)`| Método que insere um elemento em uma posição específica do ArrayList.|
+|`Clear()`| Método que remove todos os elementos do ArrayList.|
+|`Contains(object value)`| Método que verifica se um elemento específico está presente no ArrayList.|
+|`IndexOf(object value)`| Método que retorna o índice da primeira ocorrência de um elemento específico no ArrayList.|
+|`Sort()`| Método que ordena os elementos do ArrayList em ordem crescente.|
+|`ToArray()`| Método que converte o ArrayList em um array.|
+|`TrimToSize()`| Método que ajusta a capacidade do ArrayList para o número atual de elementos, liberando memória não utilizada.|
+|`Clone()`| Método que cria uma cópia superficial do ArrayList.|
+|`GetRange(int index, int count)`| Método que retorna uma sublista do ArrayList, começando no índice especificado e contendo o número especificado de elementos.|
+|`Reverse()`| Método que inverte a ordem dos elementos no ArrayList.|
+
+```csharp
+//Método usando inicialização de coleção (Collection Initializer)
+var lista = new ArrayList() 
+{
+    "Paulo", 4.5, 10, true, 'A', "Texto"
+};
+
+//Método usando Add()
+ArrayList lista = new ArrayList(); //Count = 0 e Capacity = 0
+lista.Add("Texto"); //Count = 1 e Capacity = 4
+lista.Add(123); //Count = 2 e Capacity = 4
+lista.Add(true); //Count = 3 e Capacity = 4
+```
+
+#### Construtores ArrayList 
+
+- `ArrayList()`: Cria um ArrayList vazio com capacidade inicial padrão;
+- `ArrayList(int capacidadeInicial)`: Cria um ArrayList vazio com a capacidade inicial especificada;
+- `ArrayList(ICollection colecao)`: Cria um ArrayList que contém os elementos da coleção especificada.
+
+### Adição de Elementos
+
+|Método|Definição|
+|-------|----------|
+|`Add(object value)`| Adiciona um elemento ao final do ArrayList.|
+|`AddRange(ICollection c)`| Adiciona os elementos de uma coleção ao final do Arra yList.|
+|`Insert(int index, object value)`| Insere um elemento em uma posição específica do ArrayList.|
+|`InsertRange(int index, ICollection c)`| Insere os elementos de uma coleção em uma posição específica do ArrayList.|
+
+### Remoção de Elementos
+
+|Método|Definição|
+|-------|----------|
+|`Remove(object value)`| Remove a primeira ocorrência de um elemento específico do ArrayList.|
+|`RemoveAt(int index)`| Remove o elemento na posição especificada do ArrayList.|
+|`RemoveRange(int index, int count)`| Remove um intervalo de elementos do ArrayList, começando no índice especificado e removendo o número especificado de elementos.|
+|`Clear()`| Remove todos os elementos do ArrayList. Sem alterar sua capacidade (Count - 0)|
+
+### Acesso e Pesquisa de Elementos
+
+|Método|Definição|
+|-------|----------|
+|`Contains(object value)`| Verifica se um elemento específico está presente no ArrayList.|
+|`IndexOf(object value)`| Retorna o índice da primeira ocorrência de um elemento específico no ArrayList.|
+|`LastIndexOf(object value)`| Retorna o índice da última ocorrência de um elemento específico no ArrayList.|
+|`GetRange(int index, int count)`| Retorna uma sublista do ArrayList, começando no índice especificado e contendo o número especificado de elementos.|
+|`ToArray()`| Converte o ArrayList em um array.|
+|`ToArray(Type tipo)`| Converte o ArrayList em um array do tipo especificado.|
+|`Clone()`| Cria uma cópia superficial do ArrayList.|
+
+### Ordenação e Manipulação
+
+|Método|Definição|
+|-------|----------|
+|`Sort()`| Ordena os elementos do ArrayList em ordem crescente.|
+|`Reverse()`| Inverte a ordem dos elementos no ArrayList.|
+|`TrimToSize()`| Ajusta a capacidade do ArrayList para o número atual de elementos, liberando memória não utilizada.|
+|`SetRange(int index, ICollection c)`| Substitui um intervalo de elementos no ArrayList, começando no índice especificado, pelos elementos da coleção especificada.|
+|`BinarySearch(object value)`| Realiza uma busca binária por um elemento específico no ArrayList. O ArrayList deve estar ordenado para que a busca funcione corretamente.|
