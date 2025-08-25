@@ -44,5 +44,4 @@ else
 {
        Console.WriteLine("Sim");
 }
-Console.WriteLine(listaFamiliares.Contains("Maria"));
 Console.Read();
