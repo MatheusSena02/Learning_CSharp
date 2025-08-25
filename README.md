@@ -177,3 +177,39 @@ Os métodos disponíveis na classe `List<T>` são semelhantes aos do `ArrayList`, m
 |`RemoveRange(int index, int count)`| Remove um intervalo de elementos da lista, começando no índice especificado e removendo o número especificado de elementos.|
 |`Clear()`| Remove todos os elementos da lista.|
 |`Contains(T item)`| Verifica se um elemento específico do tipo T está presente na lista.| 
+
+### Métodos Find da List < T >
+
+*Predicate < T >* é um delegado que representa um método que define um conjunto de critérios e determina se o objeto especificado atende a esses critérios. Ele é frequentemente usado em métodos de pesquisa e filtragem em coleções, como `List<T>`, para encontrar elementos que correspondem a certas condições. <br>
+Normalmente utiliza-se uma expressão lambda para definir o critério de pesquisa.
+
+|Método|Definição|
+|-------|----------|
+|`Find(Predicate<T> match)`| Retorna o primeiro elemento que corresponde às condições definidas pelo predicado especificado.|
+|`FindAll(Predicate<T> match)`| Retorna todos os elementos que correspondem às condições definidas pelo predicado especificado.|
+|`FindIndex(Predicate<T> match)`| Retorna o índice do primeiro elemento que corresponde às condições definidas pelo predicado especificado.|
+|`FindLast(Predicate<T> match)`| Retorna o último elemento que corresponde às condições definidas pelo predicado especificado.|
+|`FindLastIndex(Predicate<T> match)`| Retorna o índice do último elemento que corresponde às condições definidas pelo predicado especificado.|
+
+### Exemplo de Uso do List < T >
+```csharp
+List<string> listaConvidados = new();
+
+do
+{
+    Console.Write("Deseja adicionar um convidado (S / N) ? ");
+    string resposta = Console.ReadLine();
+    if (resposta?.ToUpper() == "S")
+    {
+        Console.Write("Nome do convidado: ");
+        string nome = Console.ReadLine();
+        listaConvidados.Add(nome);
+    }
+} while (resposta?.ToUpper() != "N");
+
+Console.WriteLine("\nLista de Convidados:");
+foreach (string convidado in listaConvidados)
+{
+    Console.WriteLine($" - {convidado}");
+}
+```

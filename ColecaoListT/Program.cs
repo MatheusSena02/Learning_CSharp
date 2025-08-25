@@ -1,4 +1,6 @@
-﻿List<string> listaConvidados = new();
+﻿using System.Collections.Generic;
+
+List<string> listaConvidados = new();
 
 do
 {
@@ -65,6 +67,10 @@ foreach (string n in listaConvidados)
 {
     Console.Write($"{n}, ");
 }
+
+
+Console.WriteLine($"\nLucas está na posição {listaConvidados.FindIndex(nome => nome.Contains("Lucas"))} da lista");
+
 
 Console.Read();
 
