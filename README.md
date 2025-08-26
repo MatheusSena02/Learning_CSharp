@@ -218,17 +218,22 @@ foreach (string convidado in listaConvidados)
 IEnumerable é uma interface que define um método para iterar sobre uma coleção de um tipo específico, permitindo a apenas leitura ("read-only") sequencial dos elementos. <br> IEnumerable possui um método para retornar o próximo item na coleção, permitindo a execução sem a necessidade de ter toda a coleção em memória ou saber quantos itens há nela. Ao usar IEnumerable, adiamos a execução das operações até que sejam necessárias. Isso significa que consultas ou operações de filtragem usando IEnumerable só são executadas quando os resultados são acessados 
 
 ```csharp
-// Um único método que aceita arrays, listas, etc.
-public int Somar(IEnumerable<int> numeros)
+// Suponha que temos uma coleção de milhões de itens
+var numerosGrandes = ObterNumerosDoBancoDeDados(); // Retorna IEnumerable
+
+// LINQ encadeado, mas NADA foi executado ainda!
+var numerosPares = numerosGrandes.Where(n => n % 2 == 0);
+
+// As operações (Where) só são executadas AQUI, quando o foreach começa.
+foreach (var numero in numerosPares)
 {
-    int soma = 0;
-    foreach (var numero in numeros)
-    {
-        soma += numero;
-    }
-    return soma;
+    Console.WriteLine(numero);
 }
 ```
+
+- `var numerosGrandes = ObterNumerosDoBancoDeDados();` : Nesse ponto, o método ObterNumerosDoBancoDeDados() não carrega todos os milhões de números na memória de uma vez. Ele provavelmente retorna um IEnumerable que representa uma consulta ao banco de dados. <br> A "conexão" ou a "instrução" para buscar os dados é criada, mas a execução da busca ainda não começou.
+- `var numerosPares = numerosGrandes.Where(n => n % 2 == 0);` : Aqui, a consulta LINQ é definida para filtrar os números pares. No entanto, essa consulta ainda não foi executada. O que foi criado é uma expressão que descreve como obter os números pares quando necessário.
+- `foreach (var numero in numerosPares)` : A execução real da consulta ocorre quando o foreach começa a iterar sobre numerosPares. Nesse momento, o LINQ executa a consulta no banco de dados, recupera os números e aplica o filtro para obter apenas os números pares. <br> Isso significa que os dados são processados "sob demanda", economizando memória e melhorando o desempenho, especialmente quando se lida com grandes conjuntos de dados.
 
 
 

@@ -8,17 +8,17 @@ for (int i = 0; i < 10; i++)
     limiteCredito.Add(new Limite { Numero = i});
 }
 
-//var limitesComRestricao = limiteCredito.Where(l => l.AnalisaLimite());
-////Nesse caso, a saída será apenas a mensagem "Fim do processo..."
-//Console.WriteLine("\nFim do processo...");
+var limitesComRestricao = limiteCredito.Where(l => l.AnalisaLimite());
+//Nesse caso, a saída será apenas a mensagem "Fim do processo..."
+Console.WriteLine("\nFim do processo...");
 
 var primeiroLimiteComRestricao = limiteCredito.FirstOrDefault();
 //Nesse caso, a saída será a mensagem "Executa análise de limite de Crédito para o limite X" apenas uma vez, inibindo as demais execuções
 Console.WriteLine($"\nPrimeiro limite com restrição: {primeiroLimiteComRestricao?.Numero}");
 
-//var limitesComRestricao = limiteCredito.Where(l => l.AnalisaLimite()).ToList();
-////Nesse caso, a saída será a mensagem "Executa análise de limite de Crédito para o limite X" 10 vezes
-//Console.WriteLine("\nFim do processo...");
+var limitesComRestricao = limiteCredito.Where(l => l.AnalisaLimite()).ToList();
+//Nesse caso, a saída será a mensagem "Executa análise de limite de Crédito para o limite X" 10 vezes
+Console.WriteLine("\nFim do processo...");
 
 
 Console.Read();
