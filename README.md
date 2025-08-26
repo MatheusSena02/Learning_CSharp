@@ -191,7 +191,6 @@ Normalmente utiliza-se uma expressão lambda para definir o critério de pesquisa.
 |`FindLast(Predicate<T> match)`| Retorna o último elemento que corresponde às condições definidas pelo predicado especificado.|
 |`FindLastIndex(Predicate<T> match)`| Retorna o índice do último elemento que corresponde às condições definidas pelo predicado especificado.|
 
-### Exemplo de Uso do List < T >
 ```csharp
 List<string> listaConvidados = new();
 
@@ -213,3 +212,33 @@ foreach (string convidado in listaConvidados)
     Console.WriteLine($" - {convidado}");
 }
 ```
+
+## IEnumerable   
+
+IEnumerable é uma interface que define um método para iterar sobre uma coleção de um tipo específico, permitindo a apenas leitura ("read-only") sequencial dos elementos. <br> IEnumerable possui um método para retornar o próximo item na coleção, permitindo a execução sem a necessidade de ter toda a coleção em memória ou saber quantos itens há nela. Ao usar IEnumerable, adiamos a execução das operações até que sejam necessárias. Isso significa que consultas ou operações de filtragem usando IEnumerable só são executadas quando os resultados são acessados 
+
+```csharp
+// Um único método que aceita arrays, listas, etc.
+public int Somar(IEnumerable<int> numeros)
+{
+    int soma = 0;
+    foreach (var numero in numeros)
+    {
+        soma += numero;
+    }
+    return soma;
+}
+```
+
+
+
+### List < T > e Principais métodos de consultas LINQ
+
+|Método|Definição|
+|-------|----------|
+|`Where(Func<T, bool> predicate)`| Filtra uma sequência de valores com base em um predicado.|
+|`Any(Func<T, bool> predicate)`| Determina se qualquer elemento de uma sequência satisfaz uma condição.|
+|`OrderBy<TKey>(Func<T, TKey> keySelector)`| Classifica os elementos de uma sequência em ordem crescente com base em uma chave.|
+|`ToList()`| Converte uma sequência em uma lista.|
+|`FirstOrDefault(Func<T, bool> predicate)`| Retorna o primeiro elemento de uma sequência que satisfaz uma condição ou um valor padrão se nenhum elemento for encontrado.|
+
