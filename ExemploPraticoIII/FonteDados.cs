@@ -78,6 +78,7 @@ namespace ExemploPraticoIII
 
         public static void AnalisaNotas(List<Aluno> lista)
         {
+
             Console.WriteLine("Alunos que obtiveram nota maior que 8 : ");
             foreach(var item in lista)
             {
