@@ -247,3 +247,30 @@ foreach (var numero in numerosPares)
 |`ToList()`| Converte uma sequência em uma lista.|
 |`FirstOrDefault(Func<T, bool> predicate)`| Retorna o primeiro elemento de uma sequência que satisfaz uma condição ou um valor padrão se nenhum elemento for encontrado.|
 
+## Indexadores
+
+Indexadores permitem que uma classe ou struct seja indexada como um array. Eles são definidos usando a palavra-chave `this` seguida por um ou mais parâmetros entre colchetes. Indexadores são úteis quando você deseja fornecer acesso a elementos de uma coleção interna de uma maneira semelhante à de um array, mas com a flexibilidade de encapsular a lógica de acesso. <br>
+O indexador é como um "atalho" que você programa para permitir que um único objeto se comporte como se fosse uma lista ou um dicionário.
+
+## Classe Random
+
+A classe `Random` em C# é usada para gerar números pseudoaleatórios. Ela faz parte do namespace `System` e oferece métodos para gerar números inteiros, números de ponto flutuante e bytes aleatórios. A geração de números pseudoaleatórios significa que os números são gerados de maneira determinística com base em um valor inicial chamado semente (seed). Se você iniciar a classe `Random` com a mesma semente, ela gerará a mesma sequência de números aleatórios.
+
+|Método|Definição|
+|-------|----------|    
+|`Next()`| Retorna um número inteiro aleatório não negativo.|
+|`Next(int maxValue)`| Retorna um número inteiro aleatório que é menor que o valor máximo especificado.|
+|`Next(int minValue, int maxValue)`| Retorna um número inteiro aleatório dentro de um intervalo especificado.|
+|`NextDouble()`| Retorna um número de ponto flutuante aleatório entre 0.0 e 1.0.|
+|`NextBytes(byte[] buffer)`| Preenche um array de bytes com números aleatórios.|
+
+|Metodo|Definição|
+|-------|----------|
+|`Random()`| Construtor que inicializa uma nova instância da classe Random usando uma semente baseada no relógio do sistema.|
+|`Random(int seed)`| Construtor que inicializa uma nova instância da classe Random usando a semente especificada.|
+
+```csharp
+Random random = new Random(); // Inicializa com uma semente baseada no relógio do sistema
+int numeroAleatorio = random.Next(1, 100); // Gera um número aleatório entre 1 e 99
+Console.WriteLine($"Número aleatório: {numeroAleatorio}");
+```
