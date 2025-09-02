@@ -84,3 +84,88 @@ Quando aplicado a uma classe, o modificador `sealed` impede que outras classes h
 
 ## Tipos de Herança 
 
+### Herança Simples
+
+Basicamente, é um tipo de herança em que há uma classe base e uma classe derivada, simples.
+
+### Herança Hierárquica
+
+É o tipo de herança em que existem várias classes derivada de uma mesma classe base.
+
+### Herança Multinível
+
+Ocorre quando uma classe é derivada de outra classe derivada, ou seja, é uma cadeia de classes derivadas que tem classes derivadas como sua classe base.
+
+### Herança Múltipla
+
+Ocorre quando temos uma base e uma classe derivada que implementa uma ou mais classes, ou seja, ela é derivada de uma classe base e implementa uma ou mais interfaces.
+
+## Downcasting e Upcasting
+
+### Upcasting
+
+Processo de converter uma classe derivada em um classe base, ou seja, é o processo de "subida" na hierarquia da herança, subir para a classe base. O processo não necessita de conversão explícita.
+
+```cssharp
+public class Animal {
+    public void Comer() => Console.WriteLine("Animal está comendo");
+}
+
+public class Cachorro : Animal {
+    public void Latir() => Console.WriteLine("Cachorro está latindo");
+}
+
+class Program {
+    static void Main() {
+        Cachorro c = new Cachorro();
+
+        // Upcasting: tratar um Cachorro como Animal
+        Animal a = c; 
+
+        a.Comer();   // ok (Animal)
+        // a.Latir(); // erro, porque a referência é Animal
+    }
+}
+```
+
+### Downcasting
+
+Processo inverso ao Upscasting, ou seja, é o processo de "descida" na hierarquia da herança, convertendo uma classe base em uma classe filha. O processo necessita de uma conversão explícita.
+
+```csharp
+class Program {
+    static void Main() {
+        Animal a = new Cachorro();  // objeto real é Cachorro
+
+        // Downcasting: converter Animal de volta para Cachorro
+        Cachorro c = (Cachorro)a;  
+
+        c.Comer();  // herdado de Animal
+        c.Latir();  // exclusivo de Cachorro
+    }
+}
+```
+
+## Operador is e as 
+
+### Operador as 
+
+Trata-se de um operador de *conversão de tipos*, realizando conversões entre *tipos de referência* e *tipos anuláveis* compatíveis. Caso a conversão seja possível, o operador `as` converte os dados, caso contrário, ele retorna `null`. <br>
+É um método comumente utilizado para evitar a ocorrência da exceção *InvalidCastException*.
+
+```csharp
+Circulo circulo = new();
+Forma forma = circulo;	//upcasting
+
+//Circulo c = (Circulo)forma
+Circulo c = forma as Circulo //downcasting
+//Tenta converter o objeto forma para um objeto do tipo Circulo
+```
+
+### Operador is
+
+Trata-se de um *verificador de tipos*, pois ele, basicamente, faz a comparação entre dois tipos de dados para averiguar se uma conversão entre esses tipos será possível. Ele **Não** converte os tipos, apenas retorna `true` caso seja possível converter e `false` caso não.
+
+### Elvis operator `?.`
+
+Trata-se de um verificador de operações, analisando que "caso o elemento a esquerda seja `null`, retorne null. Caso contrário, realiza a operação a direita do ponto `.` "
