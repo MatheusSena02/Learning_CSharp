@@ -81,3 +81,6 @@ O operador `virtual` é usado para modificar a declaração de um membro da classe 
 ### Modificador sealed
 
 Quando aplicado a uma classe, o modificador `sealed` impede que outras classes herdem essa classe.
+
+## Tipos de Herança 
+
