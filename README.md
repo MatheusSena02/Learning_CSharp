@@ -169,3 +169,13 @@ Trata-se de um *verificador de tipos*, pois ele, basicamente, faz a comparação e
 ### Elvis operator `?.`
 
 Trata-se de um verificador de operações, analisando que "caso o elemento a esquerda seja `null`, retorne null. Caso contrário, realiza a operação a direita do ponto `.` "
+
+## Classe Abstrata
+
+Tratam-se de classes que não podem ser instanciadas, ou seja, não é possível criar objetos a partir dessas classes. <br> Classes e métodos abstratos são caracterizados pelo uso do modificador `abstract`, sendo que os métodos abstratem são nativamente um método `virtual`. 
+
+- Uma classe abstrata pode conter tanto métodos abstratos, quanto métodos instanciados;
+- Um método abstrato possui somente a definição de sua assinatura, ou seja, ele não é implementado;
+- A implementação do método abstrato é feita na classe derivada e as classes derivadas são obrigadas a implementar os seus métodos abstratos;
+- É um erro usar os modificadores `virtual` e `static` em um método abstrato;
+
