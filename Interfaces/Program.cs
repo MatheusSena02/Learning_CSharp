@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Interfaces;
+
+Teste primeiraInterface = new();
+
+primeiraInterface.Desenhar();
+primeiraInterface.Exibir();
+
+Console.Read();
