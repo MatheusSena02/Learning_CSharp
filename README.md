@@ -191,3 +191,21 @@ interface IControle
 }
 
 ```
+
+## Composição
+
+Ocorre quando uma classe possui em sua composição objetos de outras classes. Basicamente, quando um classe principal, chamada de *classe pai*, tem em sua estrutura objetos de outras classes, chamadas de *classes filhas*, inclusive estabelecendo uma relação de interdependência, pois as *classes filhas* não podem existir sem a *classe pai*.
+
+- Representa uma relação `Todo - parte`;
+- O objeto `todo (pai)` é responsável por *criar* e *destruir* as suas `partes (filhas)`;
+- A `parte (filha)` não existe sem o `todo (pai)`;
+- Um mesmo `objeto-parte` não pode se associar a mais de um `objeto-Todo`, ou seja, não pode ter mais de um pai;
+
+## Agregação 
+
+Assemelha-se fortemente com a composição, inclusive constitui a mesma lógica, pois trata-se do processo de um objeto englobar objetos de outras classes. <br> Porém, diferentemente da composição, os membros da agregação possuem seus próprios ciclos de vida e são independentes, ou seja, mesmo se o elemento `pai (Todo)` deixar de existir, seus elementos `filhas (Partes)` ainda existirão, pois são independentes.
+
+### Diferencição entre Composição e Agregação 
+
+A principal forma de diferenciar a `agregação` da `composição` é observar onde e como o *objeto parte* é criado e gerenciado. Se ele for criado e controlado exclusivamente pelo objeto `Todo`, é composição. Se ele for passado para o objeto `Todo` e puder exsitir fora dele, é agregação.
+
