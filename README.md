@@ -179,3 +179,15 @@ Tratam-se de classes que não podem ser instanciadas, ou seja, não é possível cri
 - A implementação do método abstrato é feita na classe derivada e as classes derivadas são obrigadas a implementar os seus métodos abstratos;
 - É um erro usar os modificadores `virtual` e `static` em um método abstrato;
 
+## Interfaces
+
+Uma interface é semelhante a uma classe abstrata, mas não podendo conter campos de instância ou construtores, apenas as assinaturas de métodos, eventos propriedades e indexadores, também pode conter métodos públicos e estáticos que contém uma implementação. <br> **Os membros da interface são públicos por padrão** e são úteis para permitir que várias clsses diferentes implementem um conjunto comum de funcionalidades, sem precisar herdar de uma classe base comum.
+
+```csharp
+
+interface IControle
+{
+	void Desenhar();
+}
+
+```
