@@ -13,7 +13,7 @@ namespace ClasseAbstrata
         public double Perimetro { get; set; }
 
         //Métodos Abstratos
-        public abstract double CalcularArea();
+        public abstract double CalcularArea();  //public abstract virtual double CalcularArea();
         public abstract double CalcularPerimetro();
 
         //Método comum

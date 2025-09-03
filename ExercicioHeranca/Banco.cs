@@ -111,10 +111,7 @@ namespace ExercicioHeranca
         internal decimal valorJuros = 0.009m;
         internal decimal valorImposto = 0.001m;
 
-        public Investimentos(string nome) : base(nome)
-        {
-
-        }
+        public Investimentos(string nome) : base(nome) { }
 
         public override void Depositar(decimal valor)
         {
