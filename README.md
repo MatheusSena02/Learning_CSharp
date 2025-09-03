@@ -209,3 +209,14 @@ Assemelha-se fortemente com a composição, inclusive constitui a mesma lógica, po
 
 A principal forma de diferenciar a `agregação` da `composição` é observar onde e como o *objeto parte* é criado e gerenciado. Se ele for criado e controlado exclusivamente pelo objeto `Todo`, é composição. Se ele for passado para o objeto `Todo` e puder exsitir fora dele, é agregação.
 
+## Polimorfismo
+
+É o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma assinatura, mas comportamentos distintos, especializados para cada classe derivada, usando para tanto uma referência a um objeto do tipo da superclasse
+
+### Overloading (Em tempo de compilação)
+
+É um tipo de polimorfismo a sobrecarga de metodos e operadores, também chamado de ligação precoce (*early binding*). Baseando-se na sobrecarga de métodos com diferentes parâmetros de entrada
+
+### Overriding (Em tempo de execução)
+
+Pode ser feito usando herança e métodos virtuais. Quando utilizamos o *override* estamos alterando o comportamento dos métodos da classe derivada. Esse processo também é conhecido como ligação tardia (*late blinding*)
