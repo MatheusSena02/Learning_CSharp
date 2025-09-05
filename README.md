@@ -25,4 +25,24 @@ Basicamente, ele retorna `true` caso as variáveis apontem para **A MESMA REFERÊN
 ### Estratégia de comparação entre os objetos
 
 1. Utiliza o método `GetHashCode` para localizar os objetos e verificar se possuem o mesmo código hash, em função do método `GetHashCode` ser mais rápido que o `Equals`
-2. Confirmar a igualdade dos objetos usando o método `Equals`gp de o
+2. Confirmar a igualdade dos objetos usando o método `Equals`
+
+## Coleçãoes Genéricas e Não Genéricas
+
+### Não Genéricas 
+
+- As classes das coleções não genéricas armazenam os dados do tipo `Object`;
+- Fazem a conversão implícita dos tipos de dados para `Object`;
+- Realizam as operações de `boxing` ao incluir e `unboxing` ao retirar um elemento da coleção;
+- São mais suscetíveis a exceções em tempo de execução devido a incompatibilidade entre tipos;
+
+### Genéricas
+
+- São fortemente tipadas (*armazenam apenas um tipo de objeto*), evitando erros de incompatibilidade de tipo;
+- Não realizam as operações de `boxing` e `unboxing` oferecendo um melhor desempenho;
+- Facilitam a reutilização de código;
+
+
+## Dictionary < Tkey, TValue >
+
+
