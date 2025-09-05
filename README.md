@@ -43,7 +43,7 @@ Basicamente, ele retorna `true` caso as variáveis apontem para **A MESMA REFERÊN
 - Facilitam a reutilização de código;
 
 
-## Dictionary<TKey, TValue> em C#
+## Dictionary<TKey, TValue>
 
 O `Dictionary<TKey, TValue>` é uma coleção genérica presente no namespace `System.Collections.Generic` que armazena pares de chave/valor.  
 Cada **chave** (`TKey`) deve ser única, e é usada para acessar rapidamente o **valor** (`TValue`) correspondente.  

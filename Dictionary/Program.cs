@@ -41,6 +41,6 @@ else
 var dic3Ordenado = dict3.OrderBy(x => x.Key); //Ordena o dicionário dict3 a partir das chaves do dicionário
 foreach(var item in dic3Ordenado)
 {
-    Console.WriteLine($"{item.Key}.`{item.Value}");
+    Console.WriteLine($"{item.Key}.{item.Value}");
 }
 Console.Read();
