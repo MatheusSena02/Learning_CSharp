@@ -85,22 +85,20 @@ namespace ColecoesSet
 
         public static void VerificaSubconjuntos()
         {
-            Console.WriteLine($"SP ⊆ Mundo? {timesSP.IsSubsetOf(timesMundo)}");
-            Console.WriteLine($"RJ ⊆ Mundo? {timesRJ.IsSubsetOf(timesMundo)}");
-            Console.WriteLine($"BA ⊆ Mundo? {timesBA.IsSubsetOf(timesMundo)}");
+            if (timesSP.IsSubsetOf(timesMundo))
+            {
+                Console.WriteLine("timesSP é um subconjunto de timesMundiais");
+            }
 
-            // Mostra itens de SP que NÃO estão em Mundo (se houver)
-            foreach (var t in timesSP)
-                if (!timesMundo.Contains(t))
-                    Console.WriteLine($"Falta em Mundo (SP): '{t}'");
+            if (timesRJ.IsSubsetOf(timesMundo))
+            {
+                Console.WriteLine("timesRJ é um subconjunto de timesMundiais");
+            }
 
-            foreach (var t in timesRJ)
-                if (!timesMundo.Contains(t))
-                    Console.WriteLine($"Falta em Mundo (RJ): '{t}'");
-
-            foreach (var t in timesBA)
-                if (!timesMundo.Contains(t))
-                    Console.WriteLine($"Falta em Mundo (BA): '{t}'");
+            if (timesBA.IsSubsetOf(timesMundo))
+            {
+                Console.WriteLine("timesBA é um subconjunto de timesMundiais");
+            }
         }
 
         public static void VerificaSuperconjuntos()
