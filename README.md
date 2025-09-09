@@ -76,4 +76,18 @@ Internamente, o `Dictionary` é implementado como uma **tabela hash**, garantindo
 É semelhante à coleção `Dictionary < T >`, sendo uma coleção genérica que armazena seus dados no formato `chave/valor`, mas fazendo isso de forma ordenada pelas suas chaves. <br>
 Em suma, assemelha-se à classe `Dictionary < T >`, com a diferença de que ocorre a ordenação dos valores pela sua chave nas listas.
 
+## Coleções Set
+
+### HashSet 
+
+É uma coleção genérica **não ordenada** que implementa a interface `ISet<T>` e representa um conjunto de itens exclusivos (*não permite a inclusão de elementos duplicados*). <br> Funciona semelhantemente à uma tabela *hash*, mas não se trata de uma coleção do tipo `chave/valor`, pois a chave é atribuída ao elemento pelo próprio compilador. E a ordem dos elementos pode mudar a depender das operações realizadas.
+
+|Método|Definição|
+|-------|--------|
+|Count|Retorna o número de elementos no HashSet|
+|Comparer|Retorna o objeto `IEqualityComparer<T>` que é usado para determinar a igualdade dos elementos no HashSet|
+
+#### HashSet < T > (Inumerable < T >) 
+
+É possível passar listas e coleções como argumento durante a criação de uma coleção `HashSet`, consequentemente os elementos da coleção passadas no argumento serão alocadas na nova tabela `HashSet`.
 
