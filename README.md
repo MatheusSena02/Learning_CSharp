@@ -71,6 +71,9 @@ Internamente, o `Dictionary` é implementado como uma **tabela hash**, garantindo
 | `CopyTo(KeyValuePair<TKey,TValue>[] array, int index)` | Copia os elementos do dicionário para um array de `KeyValuePair` a partir de um índice. |
 | `GetEnumerator()` | Retorna um enumerador que itera pelos pares chave/valor do dicionário. |
 
+## SortedDictionary < TKey, TValue >
 
+É semelhante à coleção `Dictionary < T >`, sendo uma coleção genérica que armazena seus dados no formato `chave/valor`, mas fazendo isso de forma ordenada pelas suas chaves. <br>
+Em suma, assemelha-se à classe `Dictionary < T >`, com a diferença de que ocorre a ordenação dos valores pela sua chave nas listas.
 
 
