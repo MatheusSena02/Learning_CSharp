@@ -91,3 +91,14 @@ Em suma, assemelha-se à classe `Dictionary < T >`, com a diferença de que ocorre
 
 É possível passar listas e coleções como argumento durante a criação de uma coleção `HashSet`, consequentemente os elementos da coleção passadas no argumento serão alocadas na nova tabela `HashSet`.
 
+### SortedSet
+
+Comporta-se de maneira semelhante à HashSet, mas com a principal diferença de que trata-se de uma coleção genéricas **ordenada**, pois a classe implementa a interface `IComparer<T>` que garante que todos os elementos no objeto estejam na ordem correta.
+
+|Método|Definição|
+|-------|--------|
+|Count|Retorna o número de elementos no HashSet|
+|Comparer|Retorna o objeto `IEqualityComparer<T>` que é usado para determinar a igualdade dos elementos no HashSet|
+|Min|Obtém o valor mínino no `SortedSet<T>`, conforme definido pelo compilador|
+|Max|Obtém o valor máximo no `SortedSet<T>`, conforme definido pelo compilador|
+

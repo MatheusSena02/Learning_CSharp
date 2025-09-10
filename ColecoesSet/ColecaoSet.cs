@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ColecoesSet
+namespace HashSet
 {
     public class TimesBrasileiros
     {
@@ -78,6 +78,12 @@ namespace ColecoesSet
             {
                 Console.WriteLine($"Pelo menos um item da {timeB} tem valores na {timeA}\n");
             }
+        }
+
+        public SortedSet<T> OrdenadaLista<T> (IEnumerable<T> times)
+        {
+            var listaOrdenada = new SortedSet<T>(times);
+            return listaOrdenada;
         }
     }
 }

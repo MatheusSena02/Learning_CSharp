@@ -1,4 +1,4 @@
-﻿using ColecoesSet;
+﻿using HashSet;
 
 var dataBase = new TimesBrasileiros();
 var timesSp = dataBase.TimesSP;
@@ -27,4 +27,11 @@ Console.Write("\nIntersecção entre conjuntos nos times de Mundial e BA: ");
 timesRj.ExceptWith(timesMundial);
 dataBase.ExibeTime(timesRj);
 
+var listaOrdenada = dataBase.OrdenadaLista<string>(timesSp);
+Console.WriteLine("\n");
+Console.WriteLine("Lista ordenada: ");
+foreach (var item in listaOrdenada)
+{
+    Console.WriteLine(item);
+}
 Console.Read();
