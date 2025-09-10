@@ -2,138 +2,82 @@
 
 namespace ColecoesSet
 {
-    public class HashSet
+    public class TimesBrasileiros
     {
-        private static HashSet<string> timesSP = new HashSet<string>
+        private HashSet<string> timesSp = new HashSet<string>
         {
             "Santos", "Palmeiras", "São Paulo" 
         };
 
-        private static HashSet<string> timesRJ = new HashSet<string>
+        public HashSet<string> TimesSP {  get { return timesSp; } }
+
+        private HashSet<string> timesRj = new HashSet<string>
         {
             "Vasco", "Flamengo", "Fluminense" 
         };
 
-        private static HashSet<string> timesBA = new HashSet<string>
+        public HashSet<string> TimesRJ { get { return timesRj; } }
+
+        private HashSet<string> timesBa = new HashSet<string>
         {
             "Bahia", "Vitória", "Juazeiro" 
         };
 
-        private static HashSet<string> timesMundo = new HashSet<string>
+        public HashSet<string> TimesBA { get { return timesBa; } }
+
+        private HashSet<string> timesComMundial = new HashSet<string>
         {
             "Santos", "Palmeiras", "São Paulo", "Flamengo"
         };
 
-        public static void ExibeTimesSP()
-        {
-            foreach(var i in timesSP)
-            {
-                Console.Write($"|{i}|");
-            }
-            Console.WriteLine("\n");
-        }
-        public static void ExibeTimesRJ()
-        {
-            foreach(var i in timesRJ)
-            {
-                Console.WriteLine(i);
-            }
-            Console.WriteLine("\n");
-        }
-        public static void ExibeTimesBA()
-        {
-            foreach(var i in timesBA)
-            {
-                Console.WriteLine(i);
-            }
-            Console.WriteLine("\n");
-        }
+        public HashSet<string> TimesComMundial { get { return timesComMundial; } }
 
-        public static void AdicionaTimeSP(string? time)
+        public void ExibeTime<T>(IEnumerable <T> times)
         {
-            if (!timesSP.Contains(time))
+            foreach(var nome in times)
             {
-                timesSP.Add(time);
-            }
-            else
-            {
-                Console.WriteLine("Elemento já existente na lista");
-            }
-        }
-        public static void AdicionaTimeRJ(string? time)
-        {
-            if (!timesRJ.Contains(time))
-            {
-                timesRJ.Add(time);
-            }
-            else
-            {
-                Console.WriteLine("Elemento já existente na lista");
-            }
-        }
-        public static void AdicionaTimeBA(string? time)
-        {
-            if (!timesBA.Contains(time))
-            {
-                timesBA.Add(time);
-            }
-            else
-            {
-                Console.WriteLine("Elemento já existente na lista");
+                Console.Write($"|{nome}|");
             }
         }
 
-        public static void VerificaSubconjuntos()
+        public void AdicionaTime(HashSet<string>listTimes, string? nomeTime)
         {
-            if (timesSP.IsSubsetOf(timesMundo))
-            {
-                Console.WriteLine("timesSP é um subconjunto de timesMundiais");
-            }
+            listTimes.Add(nomeTime);
+            Console.WriteLine($"\n\nTime adicionado com sucesso à lista\n");
+        }
 
-            if (timesRJ.IsSubsetOf(timesMundo))
+        public void VerificaSubconjuntos(HashSet<string> timeA, HashSet<string> timeB)
+        {
+            if (timeA.IsSubsetOf(timeB))
             {
-                Console.WriteLine("timesRJ é um subconjunto de timesMundiais");
+                Console.WriteLine($"{timeA} é um subconjunto de {timeB}");
+            }else if (timeB.IsSubsetOf(timeA))
+            {
+                Console.WriteLine($"{timeB} é um subconjunto de {timeA}");
             }
+            
+        }
 
-            if (timesBA.IsSubsetOf(timesMundo))
+        public void VerificaSuperconjuntos(HashSet<string> timeA, HashSet<string> timeB)
+        {
+            if (timeA.IsSupersetOf(timeB))
             {
-                Console.WriteLine("timesBA é um subconjunto de timesMundiais");
+                Console.WriteLine($"{timeA} é um superconjunto de {timeB}");
+            }else if(timeB.IsSupersetOf(timeA) )
+            {
+                Console.WriteLine($"{timeB} é um subconjunto de {timeA}");
             }
         }
 
-        public static void VerificaSuperconjuntos()
+        public void VerificaElementosComuns(HashSet<string> timeA, HashSet<string> timeB)
         {
-            if (timesMundo.IsSupersetOf(timesSP))
+            if (timeA.Overlaps(timeB))
             {
-                Console.Write("timesMundo é um super conjunto de timesSP");
-            }
-
-            if (timesMundo.IsSupersetOf(timesRJ))
+                Console.WriteLine($"\n\nPelo menos um item da {timeA} tem valores na {timeB}\n");
+            }else if( timeB.Overlaps(timeA))
             {
-                Console.Write("timesMundo é um super conjunto de timesRJ");
-            }
-            if (timesMundo.IsSupersetOf(timesBA))
-            {
-                Console.Write("timesMundo é um super conjunto de timesBA");
+                Console.WriteLine($"Pelo menos um item da {timeB} tem valores na {timeA}\n");
             }
         }
-
-        public static void VerificaElementosComuns()
-        {
-            if (timesSP.Overlaps(timesMundo))
-            {
-                Console.WriteLine("Pelo menos um time do SP possuí título mundial");
-            }
-            if (timesRJ.Overlaps(timesMundo))
-            {
-                Console.WriteLine("Pelo menos um time do RJ possuí título mundial");
-            }
-            if (timesBA.Overlaps(timesMundo))
-            {
-                Console.WriteLine("Pelo menos um time da BA possuí título mundial");
-            }
-        }
-
-
     }
 }
