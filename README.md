@@ -102,3 +102,32 @@ Comporta-se de maneira semelhante à HashSet, mas com a principal diferença de qu
 |Min|Obtém o valor mínino no `SortedSet<T>`, conforme definido pelo compilador|
 |Max|Obtém o valor máximo no `SortedSet<T>`, conforme definido pelo compilador|
 
+## Coleções ReadOnly
+
+São estruturas de dados que permite que os dados sejam acessados, mas não modificados. Existem diversas classes do tipo `ReadOnly`, que limitam o acesso das coleções para apenas leituras, podendo ler `coleções/arrays`, `List<T>`, `Dictionary<T>`, entre outros.
+
+### ReadOnlyCollection< T >
+
+Fornece a classe base para uma coleção somente leitura genérica, sendo criada a partir de uma coleção mutável, como `Array` e `List`.
+
+|Métodos|Definição|
+|---------|-------|
+|Contains (T item)| Determina se um elemento está na coleção|
+|CopyTo(T[] array, int arrayIndex)|Copia os elementos da coleção para um Array unidimensional compatível, começando no índoce específico do array de destino|
+|GetEnumerator()| Retorna um enumerador que itera pela coleção|
+|IndexOf(T item)| Pesquisa o objeto especificado e retorna o índice baseado em zero da primeira ocorrência em toda a coleção|
+
+#### Métodos de conversão ReadOnly
+
+- `Construtor` :
+```csharp
+var planetas = new List<string>() {"Mercúrio, "Vênus", "Terra", "Marte"};
+var listaPlanetas = new ReadOnlycollection<string>(planetas);
+### Passa uma lista, que é convertida para ReadOnlyCollection
+```
+
+- `.AsReadOnly()`: Retorna um invólucro `ReadOnlyCollection<T>` somente leitura para a coleção atual.
+```csharp
+var planetas = new List<string>() {"Mercúrio, "Vênus", "Terra", "Marte"};
+var novaLista = planetas.AsReadOnly();
+```
