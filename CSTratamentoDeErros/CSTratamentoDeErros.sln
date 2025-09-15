@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LancamentoDeExcecoesThrow",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltroDeExcecoes", "FiltroDeExcecoes\FiltroDeExcecoes.csproj", "{CC15048B-6EC5-4943-89AD-E5699AC63C44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioTratamentoDeExcecoes", "ExercicioTratamentoDeExcecoes\ExercicioTratamentoDeExcecoes.csproj", "{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CC15048B-6EC5-4943-89AD-E5699AC63C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC15048B-6EC5-4943-89AD-E5699AC63C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC15048B-6EC5-4943-89AD-E5699AC63C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

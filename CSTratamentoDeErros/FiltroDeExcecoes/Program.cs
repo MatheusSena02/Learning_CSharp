@@ -1,4 +1,5 @@
-﻿try
+﻿
+try
 {
     Console.Write("Informe o numerador: ");
     int valor1 = Convert.ToInt32(Console.ReadLine());
