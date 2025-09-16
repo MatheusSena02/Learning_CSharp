@@ -167,6 +167,10 @@ throw new Exception();
 throw new Exception("Lançamento manual de exceção");
 ````
 
+### `throw new`
+
+Cria uma nova exceção e lança no ponto em que ele foi chamado, interrompendo imediatamente a execução normal do código e transferindo o controle para o mecanismo de tratamento, ou seja, ele procura um bloco `catch` que possua os mecanismos para tratar o erro. Caso não encontre algo correspondente, o programa falha.
+
 ## Filtrando Exceções
 
 O recurso de `Exception Filters` permite executar blocos `try/catch` com base em uma condição específica quando ocorre uma exceção.<br

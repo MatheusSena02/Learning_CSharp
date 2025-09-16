@@ -1,4 +1,4 @@
-﻿A.ProcessarA();
+﻿Vam                                                                                                                                    ApnA.ProcessarA();
 Console.Read();
 class A
 {
