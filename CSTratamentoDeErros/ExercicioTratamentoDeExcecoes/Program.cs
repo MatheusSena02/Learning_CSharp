@@ -8,7 +8,7 @@
     Console.WriteLine("Aguarde...");
     
     HttpClient client = new HttpClient();
-    HttpResponseMessage responde = client.GetAsync(url + arquivo).Result;
+    HttpResponseMessage responde = client.GetAsync(url + "/" + arquivo).Result;
 
     if (responde.IsSuccessStatusCode)
     {
