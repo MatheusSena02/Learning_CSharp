@@ -1,12 +1,38 @@
-# Delegates, Express�es Lambda, Eventos e LINQ
+﻿# 📘 Estudos em C#  
 
-## Delegates
+Este repositório contém minhas anotações, códigos de exemplo e exercícios desenvolvidos durante meu aprendizado da linguagem **C#**, com base no curso [C# COMPLETO Programação Orientada a Objetos + Projetos](https://www.udemy.com/course-dashboard-redirect/?course_id=5224172), disponível na Udemy.  
 
-Trata-se de um tipo de dado, assim como `int`, `string`, `bool`, dentre outros, mas `delegates` representam refer�ncias a m�todos com uma *lista de par�metros* e um *tipo de retorno*.<br>
-Ao instanciar um `delegate`, podemos asoociar a sua inst�ncia a qualquer m�todo com uma **assinatura compat�vel e tipo de retorno**, podemos invocar o m�todo por meio da inst�ncia delegada. <br>
+---
 
-Comumente a declara��o de um `delegate` segue a seguinte estrutura :
+## 📂 Estrutura do Repositório  
 
-|modificador de acesso| delegate |tipo de retorno| nome do delegate | (par�metros)|
-|--------------------|---------|---------------|-------------------|---------------|
+- **/anotacoes** → Resumos e conceitos importantes estudados.  
+- **/exercicios** → Exercícios práticos propostos ao longo do curso.  
+- **/projetos** → Projetos maiores aplicando os conteúdos aprendidos.  
+- **/exemplos** → Códigos de demonstração para fixar conceitos.  
 
+---
+
+## 🛠️ Tecnologias e Ferramentas  
+
+- Linguagem: **C#**  
+- Ambiente: **.NET SDK**  
+- Editor recomendado: **Visual Studio / VS Code**  
+- Controle de versão: **Git & GitHub**  
+
+---
+
+## 🎯 Objetivo  
+
+- Consolidar os conceitos fundamentais de C#.  
+- Praticar **Programação Orientada a Objetos (POO)**.  
+- Resolver problemas e desafios práticos.  
+- Criar uma base sólida para projetos futuros em C#.  
+
+---
+
+## 🚀 Como Executar os Códigos  
+
+1. Clone o repositório:  
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
