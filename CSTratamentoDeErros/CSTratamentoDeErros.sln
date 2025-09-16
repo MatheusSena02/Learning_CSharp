@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltroDeExcecoes", "FiltroD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioTratamentoDeExcecoes", "ExercicioTratamentoDeExcecoes\ExercicioTratamentoDeExcecoes.csproj", "{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosPropostos", "ExerciciosPropostos\ExerciciosPropostos.csproj", "{240A37AE-DA56-487D-8243-A4416AC639F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1FAFAB4-8A9D-4106-94D0-8FCB22C92F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240A37AE-DA56-487D-8243-A4416AC639F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240A37AE-DA56-487D-8243-A4416AC639F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240A37AE-DA56-487D-8243-A4416AC639F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240A37AE-DA56-487D-8243-A4416AC639F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
