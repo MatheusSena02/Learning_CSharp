@@ -11,7 +11,7 @@ Este repositório contém minhas anotações, códigos de exemplo e exercícios 
 - **/projetos** → Projetos maiores aplicando os conteúdos aprendidos.  
 - **/exemplos** → Códigos de demonstração para fixar conceitos.  
 
----
+--- 
 
 ## 🛠️ Tecnologias e Ferramentas  
 
