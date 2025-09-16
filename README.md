@@ -183,3 +183,15 @@ catch (Exception ex) when (ex.Message.Contains("format")) //Lança a exceção se a
 ``` 
 
 - **Se o parâmetro oferecido para o operador `when` gerar uma exceção, o operador irá retornar *false* e o bloco catch não será executado**
+
+## Exceções Personalizadas
+
+É possível criar exceções personalizadas ao simplesmente criar uma classe que deriva/herda da class `System.Exception` <br>
+Ao fazer isso, recomenda-se finalizar o nome da exceção personalizada criada com a palavra `Exception` e implementando seus três métodos comuns.
+
+### Recomendações
+
+- Criar uma classe de exceção separada para cada condição de erro que deseja manipular;
+- Substituir a propriedade `Message` para fornecer uma mensagem de erro significativa e personalizada que descreva a condição de erro;
+- Substituir o método `ToString()` para retornar uma *representação em string da exceção*, que pode ser útil para fins de log e depuração;
+- Adicionar propriedades ou métodos adicionais necessários à classe de exceção personalizada para fornecer mais informações sobre a condição de erro.
