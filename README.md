@@ -55,3 +55,131 @@ O finally é ideal para liberar recursos ou executar ações de encerramento, como:
 - Liberar memória de objetos não gerenciados;
 
 - Mostrar mensagens de log indicando o término de uma operação.
+
+## Exceções da Classe Exception
+
+## ?? Erros Gerais
+
+- **Exception** – Classe base para todas as exceções.
+
+- **SystemException** – Classe base para exceções do sistema em tempo de execução.
+
+- **ApplicationException** – Usada para definir exceções personalizadas de aplicação.
+ 
+---
+ 
+### ?? Operações Numéricas
+
+- **DivideByZeroException** – Tentativa de dividir por zero.
+
+- **OverflowException** – Resultado de operação numérica excede o limite do tipo.
+
+- **ArithmeticException** – Base para exceções aritméticas.
+ 
+---
+ 
+### ?? Arquivos e Diretórios
+
+- **FileNotFoundException** – Arquivo não encontrado.
+
+- **DirectoryNotFoundException** – Diretório não encontrado.
+
+- **PathTooLongException** – Caminho excede o tamanho máximo permitido.
+
+- **IOException** – Erros de entrada/saída genéricos.
+
+- **EndOfStreamException** – Final inesperado de fluxo.
+ 
+---
+ 
+### ?? Argumentos e Valores Inválidos
+
+- **ArgumentException** – Argumento inválido.
+
+- **ArgumentNullException** – Argumento nulo passado indevidamente.
+
+- **ArgumentOutOfRangeException** – Valor fora do intervalo permitido.
+
+- **NullReferenceException** – Tentativa de acessar membro de objeto nulo.
+
+- **InvalidOperationException** – Estado inválido do objeto para a operação.
+
+- **FormatException** – Formato inválido em conversão/parsing.
+ 
+---
+ 
+### ?? Coleções e Índices
+
+- **IndexOutOfRangeException** – Índice inválido em array ou coleção.
+
+- **KeyNotFoundException** – Chave não encontrada em dicionário.
+ 
+---
+ 
+### ?? Rede e Segurança
+
+- **UnauthorizedAccessException** – Acesso não autorizado a recurso.
+
+- **SecurityException** – Violação de segurança detectada.
+
+- **WebException** – Erro relacionado a requisições HTTP/HTTPS.
+ 
+---
+ 
+### ?? Concorrência e Threads
+
+- **ThreadAbortException** – Thread foi abortada.
+
+- **ThreadInterruptedException** – Thread interrompida durante espera.
+
+- **SynchronizationLockException** – Erro ao usar locks incorretamente.
+ 
+---
+ 
+### ?? Outras Comuns
+
+- **NotImplementedException** – Método ainda não implementado.
+
+- **NotSupportedException** – Operação não suportada.
+
+- **TimeoutException** – Operação excedeu tempo limite.
+
+- **OutOfMemoryException** – Memória insuficiente.
+
+- **StackOverflowException** – Estouro de pilha (recursão infinita, por exemplo).
+ 
+---
+ 
+### ?? Observações
+
+- Sempre que possível, trate exceções específicas em vez de capturar apenas **`Exception`**.
+
+- Para exceções personalizadas, derive da classe **`ApplicationException`** ou diretamente de **`Exception`**.
+
+## Lançamento de Exceções
+
+É possível lançar exceções de maneira explícita e de maneira manual usando a instrução `throw` seguida por uma instância de classe de exceção como `Exception` ou uma de suas classes derivas.
+
+```chsarp
+# Exemplo básico
+throw new Exception();
+
+throw new Exception("Lançamento manual de exceção");
+````
+
+## Filtrando Exceções
+
+O recurso de `Exception Filters` permite executar blocos `try/catch` com base em uma condição específica quando ocorre uma exceção.<br
+Um bloco `catch` será executado somente quando a condição for *verdadeira*. Caso contrário, o bloco `catch` é ignorado e o complicador procura o próximo manipulador `catch`.
+
+Podemos implementar este recurso adicionando a condição `when` junto com os blocos `catch`
+
+```csharp
+catch (Exception ex) when (ex.Message.Contains("format")) //Lança a exceção se a mensagem de exceção conter a palavra "format"
+{
+    Console.WriteLine(ex.StackTrace);
+    Console.WriteLine("Erro de formatação");
+}
+``` 
+
+- **Se o parâmetro oferecido para o operador `when` gerar uma exceção, o operador irá retornar *false* e o bloco catch não será executado**
