@@ -19,7 +19,7 @@ Tratam-se de `Delegates` que possuem capacidade de encapsular mais de uma referê
 Existem dois principais métodos para acessar métodos individuais dentro de um `Multicast Delegate` : Usando `GetInvocationList()` ou `DynamicInvoke()`.
 
 - `GetInvocationList()` : Retorna a lista de invocação do `Delegate`;
-- `DynamicInvoke()` : Invoca um método representado por um `Delegate` em tempo de execução, em vez de tempo de compilação;
+- `DynamicInvoke()` : Invoca um método representado por um `Delegate` em tempo de execução, em vez de tempo de compilação;-
 
 ```csharo
 
@@ -31,3 +31,8 @@ foreach(var handler in d.GetInvocationList())
 var apenasB = d.GetInvocationList()[1];
 apenasB.DynamicInvoke();	//Executa só o método B
 ```
+
+## Métodos Anônimos 
+
+Trata-se de uma função que não possui nome e que pode ser definida usando a palavra-chave `delegate` e pode ser atribuída a uma variável do tip o`delegate`. <br>
+Uma função anônima é uma declaração *in-line* ou expressão que pode ser usada sempre que um tipo de `delegate` for esperado. 
