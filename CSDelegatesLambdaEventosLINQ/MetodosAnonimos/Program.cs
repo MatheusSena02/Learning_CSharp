@@ -13,8 +13,7 @@ nomes.Add("Lucas");
 nomes.Add("Matheus");
 
 // Usamos o método Find para procurar um elemento dentro da lista
-// O Find recebe como argumento um "Predicate<T>", ou seja,
-// uma função que recebe um item da lista e retorna true ou false.
+// O Find recebe como argumento um "Predicate<T>", ou seja,uma função que recebe um item da lista e retorna true ou false.
 // Essa função é passada aqui como um delegate anônimo:
 string? resultado = nomes.Find(delegate (string nome)
 {
