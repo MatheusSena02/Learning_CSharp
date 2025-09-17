@@ -51,3 +51,26 @@ Trata-se de uma *função anônima* que pode ser usada para criar `delegates` pu ex
 lista.FindIndex(nome => nome.Contains("Lucas"));
 //O método espera receber um predicado e retornar um bool, como se trata de uma lista de nomes, o compilador já infere o tipo como uma string
 ```
+
+## Delegates Pré-Definidas
+
+A linguagem C# possui delegates pré-definifos que podem ser utilizados para passar referências a métodos como arugmentos para outros métodos. Funcionam como funções nativas, mas no contexto do `delegate`, são `delegates` nativos que podem ser usados livremente.
+
+#### Predicate < T >
+
+Represente um método que define um conjunto de critérios e determina se o objeto específico satisfaz a condição. <br> Recebe um único argumento de entrada do tipo T e retorna um valor booleano.
+
+- Estrutura do Delegate Predicate < T >
+
+|public|delegate|boom|Predicate < T >| (T obj)|
+|--------------|---------|---------|-----------|
+
+
+### Action < T >
+
+Representa um método que não retorna um valor (`void`), mas pode receber até **16 argmentos** de entrada. É útil para representar um método que executa ação, sem retornar nenhum valor.
+
+```chsarp
+Action<string> imprimir = texto => Console.WriteLine(texto);
+imprimir("Hello World");
+````
