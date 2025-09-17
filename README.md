@@ -36,3 +36,18 @@ apenasB.DynamicInvoke();	//Executa só o método B
 
 Trata-se de uma função que não possui nome e que pode ser definida usando a palavra-chave `delegate` e pode ser atribuída a uma variável do tip o`delegate`. <br>
 Uma função anônima é uma declaração *in-line* ou expressão que pode ser usada sempre que um tipo de `delegate` for esperado. 
+
+## Expressões Lambda 
+
+Trata-se de uma *função anônima* que pode ser usada para criar `delegates` pu expressões de árvores de expressão; É uma maneira mais curta de representa um *método anônimo* usando uma sintaxe especial, chamada de *sugar sintax*. <br>  Semelhantemente aos métodos anônimos, são usados para escrever métodos *in-line* simples e rápidos
+
+|Parâmetro de entrada)|Operador *Lmabda*|Expressão ou Bloco de Instrução|Resultado|
+|---------------------|-----------------|-------------------------------|---------|
+|	(string x)        |		= >         |  x * x                        |Retorna x²|
+
+**Na expressão Lambda, o compilador infere o *tipo de parâmetro* e o *tipo de retorno* com base no contexto**
+
+```csharp
+lista.FindIndex(nome => nome.Contains("Lucas"));
+//O método espera receber um predicado e retornar um bool, como se trata de uma lista de nomes, o compilador já infere o tipo como uma string
+```
