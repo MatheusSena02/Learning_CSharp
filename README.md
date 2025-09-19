@@ -62,7 +62,7 @@ Represente um método que define um conjunto de critérios e determina se o objeto
 
 - Estrutura do Delegate Predicate < T >
 
-|public|delegate|boom|Predicate < T >| (T obj)|
+|public|delegate|bool|Predicate < T >| (T obj)|
 |--------------|---------|---------|-----------|
 
 
@@ -70,7 +70,27 @@ Represente um método que define um conjunto de critérios e determina se o objeto
 
 Representa um método que não retorna um valor (`void`), mas pode receber até **16 argmentos** de entrada. É útil para representar um método que executa ação, sem retornar nenhum valor.
 
+|public|delegate|void|Action < T >| (T obj)|
+|--------------|---------|---------|-----------|
+
 ```chsarp
 Action<string> imprimir = texto => Console.WriteLine(texto);
 imprimir("Hello World");
 ````
+
+## Delegate Func 
+
+Representa um método que encapsula método que pode possuir de 0 a 16 parâmetros e que tem um tipo de retorno.
+
+|public|delegate|TResult|Func < Tn >| (Tn argn obj)|
+|--------------|---------|---------|-----------|
+ 
+ ```csharp
+ Func<double, double> quadrado = x => x * 2;
+//Recebe um double e retorna um double (int T e out TResult)
+
+double resultado = quadrado(5.0);
+
+Console.WriteLine(resultado) //25;
+```
+
