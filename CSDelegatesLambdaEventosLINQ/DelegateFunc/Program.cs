@@ -1,5 +1,5 @@
 ﻿Console.Write("Digite um número: ");
-double numero = Convert.ToInt32(Console.ReadLine());
+ double numero = Convert.ToInt32(Console.ReadLine());
 
 Func<double, double> raizQuadrada = x => Math.Sqrt(x);
 

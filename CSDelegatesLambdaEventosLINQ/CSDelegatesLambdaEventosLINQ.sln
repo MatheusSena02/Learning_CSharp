@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateAction", "DelegateA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateFunc", "DelegateFunc\DelegateFunc.csproj", "{4C805775-0CA3-4F32-B19E-CA65A5CE755C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioDelegate", "ExercicioDelegate\ExercicioDelegate.csproj", "{829BD579-546E-4926-AC2F-1C09C8D03441}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4C805775-0CA3-4F32-B19E-CA65A5CE755C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C805775-0CA3-4F32-B19E-CA65A5CE755C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C805775-0CA3-4F32-B19E-CA65A5CE755C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829BD579-546E-4926-AC2F-1C09C8D03441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829BD579-546E-4926-AC2F-1C09C8D03441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829BD579-546E-4926-AC2F-1C09C8D03441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829BD579-546E-4926-AC2F-1C09C8D03441}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
