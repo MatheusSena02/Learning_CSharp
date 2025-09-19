@@ -58,7 +58,7 @@ A linguagem C# possui delegates pré-definifos que podem ser utilizados para pass
 
 #### Predicate < T >
 
-Represente um método que define um conjunto de critérios e determina se o objeto específico satisfaz a condição. <br> Recebe um único argumento de entrada do tipo T e retorna um valor booleano.
+Represente um método que define um conjunto de critérios e determina se o objeto específico satisfaz a condição. <br> Recebe um único argumento de entrada do tipo T e retorna um valor booleano. Comumente utilizado para operações de filtragem de informações.
 
 - Estrutura do Delegate Predicate < T >
 
