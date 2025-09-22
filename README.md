@@ -115,4 +115,10 @@ Representa um método que vai manipular um evento que não possui dados, ou seja, 
 
 ### EventHandler < TEventArgs >
 
-Representa um método que vai manipular um evento que possui dados, ou seja, o evento pode passar dados extras além do rementente (*sender*). 
+Representa um método que vai manipular um evento que possui dados, ou seja, o evento pode passar dados extras além do rementente (*sender*). <br> Será necessário definir uma classe que herda da classe `EventArgs` e armazena os dados que desejamos passar na classe.
+
+## Métodos de Extensão
+
+Os membros da extensão permitem que você "adicione" métodos aos tipos existentes sem criar um novo tipo derivado, recompilar ou modificar o tipo original, permitindo com que se estenda a funcionalidade de um tipo existente.<br> Os blocos de extensão dão suporte a vários tipos de membro: métodos, propriedades e operadores. Com blocos de extensão, você pode definir extensões de instância e extensões estáticas. As extensões de instância estendem uma instância do tipo; Extensões estáticas estendem o tipo em si. A forma de métodos de extensão declarada com o modificador this dá suporte a métodos de extensão de instância.
+
+Métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de instância no tipo estendido.                                                                                                                                                     
