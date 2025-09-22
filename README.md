@@ -106,3 +106,13 @@ Os eventos permitem que uma classe ou objeto notifique outras classes ou objetos
 - Na biblioteca de classes do .NET, os eventos são baseados no delegado EventHandler e na classe base EventArgs.
 
 **Basicamente, o *publisher* determina quando um evento é acionado. Os *subscribers* determinam a ação que é executada em resposta ao evento**.
+
+## Delegates pré-definidos
+
+### EventHandler
+
+Representa um método que vai manipular um evento que não possui dados, ou seja, o evento não precisa passar dados extras além do rementente (*sender*). 
+
+### EventHandler < TEventArgs >
+
+Representa um método que vai manipular um evento que possui dados, ou seja, o evento pode passar dados extras além do rementente (*sender*). 
