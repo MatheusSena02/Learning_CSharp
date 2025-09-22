@@ -94,3 +94,15 @@ double resultado = quadrado(5.0);
 Console.WriteLine(resultado) //25;
 ```
 
+## Eventos
+
+Os eventos permitem que uma classe ou objeto notifique outras classes ou objetos quando algo de interesse ocorrer. A classe que envia (ou gera) o evento é chamada de *publiser* e as classes que recebem (ou manipulam) o evento são chamadas de *subscribers*. <br> Em um aplicativo Web ou Windows Forms em C# típico, você assina eventos gerados por controles como botões e caixas de listagem. 
+
+- O editor determina quando um evento é gerado; os assinantes determinam qual ação é tomada em resposta ao evento.
+- Um evento pode ter vários assinantes. Um assinante pode manipular vários eventos de vários publicadores.
+- Eventos que não têm assinantes nunca são acionados.
+- Os eventos normalmente são usados para sinalizar ações do usuário, como cliques de botão ou seleções de menu em interfaces gráficas do usuário.
+- Quando um evento tem vários assinantes, os manipuladores de eventos são invocados de forma síncrona quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte chamando métodos síncronos de forma assíncrona.
+- Na biblioteca de classes do .NET, os eventos são baseados no delegado EventHandler e na classe base EventArgs.
+
+**Basicamente, o *publisher* determina quando um evento é acionado. Os *subscribers* determinam a ação que é executada em resposta ao evento**.
