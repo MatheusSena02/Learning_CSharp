@@ -121,4 +121,6 @@ Representa um método que vai manipular um evento que possui dados, ou seja, o ev
 
 Os membros da extensão permitem que você "adicione" métodos aos tipos existentes sem criar um novo tipo derivado, recompilar ou modificar o tipo original, permitindo com que se estenda a funcionalidade de um tipo existente.<br> Os blocos de extensão dão suporte a vários tipos de membro: métodos, propriedades e operadores. Com blocos de extensão, você pode definir extensões de instância e extensões estáticas. As extensões de instância estendem uma instância do tipo; Extensões estáticas estendem o tipo em si. A forma de métodos de extensão declarada com o modificador this dá suporte a métodos de extensão de instância.
 
-Métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de instância no tipo estendido.                                                                                                                                                     
+Métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de instância no tipo estendido.                       
+
+**São muito usados juntamente com a LINQ, pois permite criar métodos que permitem com que determinados tipos, que originalmente não poderiam trabalhar com a LINQ, agora consigam incrementar funcionalidades do tipo**
