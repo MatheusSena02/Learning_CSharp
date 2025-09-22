@@ -124,3 +124,5 @@ Os membros da extensão permitem que você "adicione" métodos aos tipos existentes
 Métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de instância no tipo estendido.                       
 
 **São muito usados juntamente com a LINQ, pois permite criar métodos que permitem com que determinados tipos, que originalmente não poderiam trabalhar com a LINQ, agora consigam incrementar funcionalidades do tipo**
+
+## LINQ
