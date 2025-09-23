@@ -153,6 +153,3 @@ As consultas LINQ usam *métodos de extensão* para classes que implementam a inte
 
 - `IEnumerable` : Comumente base para coleções que podem ser iteradas/percorridas, como `List<T>`, `ArrayList<T>`, `Dictionary`;
 - `IQueryable` : Representa coleções de objetos que podem ser consultados usando fontes de dados externa, como um banco de dados;
-
-## Consultas LINQ
-
