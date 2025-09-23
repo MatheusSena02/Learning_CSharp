@@ -127,3 +127,25 @@ Métodos de extensão são métodos estáticos, mas são chamados como se fossem métod
 
 ## LINQ
 
+Language-Integrated Query (LINQ) é o nome de um conjunto de tecnologias com base na integração de recursos de consulta diretamente na linguagem C#. Tradicionalmente, as consultas em relação aos dados são expressas como cadeias de caracteres simples sem verificação de tipo em tempo de compilação ou suporte do IntelliSense. <br> Além disso, a LINQ inibe a necessidade de aprender uma linguagem de consultas diferentes para cada cenário.
+
+- As expressões de consulta consultam e transformam dados de qualquer fonte de dados habilitada para LINQ. Por exemplo, uma única consulta pode recuperar dados de um banco de dados SQL e produzir um fluxo XML como saída. 
+- As expressões de consulta usam muitos constructos de linguagem C# familiares, o que os torna fáceis de ler. As variáveis em uma expressão de consulta são todas fortemente tipadas. 
+- Uma consulta não é executada até que você itere sobre a variável de consulta, por exemplo, em uma instrução foreach. 
+- No tempo de compilação, as expressões de consulta são convertidas em chamadas de método de operador de consulta padrão de acordo com as regras definidas na especificação C#. Qualquer consulta que possa ser expressa usando a sintaxe de consulta também pode ser expressa usando a sintaxe do método. Em alguns casos, a sintaxe de consulta é mais legível e concisa. Em outros, a sintaxe do método é mais legível. Não há diferença semântica ou de desempenho entre as duas formas diferentes. Para obter mais informações, consulte a especificação da linguagem C# e a visão geral dos operadores de consulta Standard. 
+- Algumas operações de consulta, como Count ou Max, não têm cláusula de expressão de consulta equivalente e, portanto, devem ser expressas como uma chamada de método. A sintaxe do método pode ser combinada com a sintaxe de consulta de várias maneiras. 
+- As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. As consultas IEnumerable< T > são compiladas para representantes. As consultas IQueryable e IQueryable < T > são compiladas para árvores de expressão. Para obter mais informações, consulte Árvores de expressão.
+
+### Esquema básico de consultas
+
+1. Definir a fonte de dados;
+2. Definir a consulta LINQ (como filtragem, ordenação, agrupamento, etc);
+3. Executar a consulta;
+
+### Implementação da LINQ
+
+As consultas LINQ usam *métodos de extensão* para classes que implementam a interface `Inumerable` ou `IQueryable`, isso permite com que seja possível chamar qualquer método LINQ em qualquer objeto que implemente algum desses dois. <br> As classes e interfaces da LINQ estão presentes no namespace `System.Linq`. 
+
+- `IEnumerable` : Comumente base para coleções que podem ser iteradas/percorridas, como `List<T>`, `ArrayList<T>`, `Dictionary`;
+- `IQueryable` : Representa coleções de objetos que podem ser consultados usando fontes de dados externa, como um banco de dados;
+
