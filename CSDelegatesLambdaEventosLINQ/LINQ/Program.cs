@@ -31,4 +31,6 @@ foreach(var item in resultado2)
 
 Console.WriteLine("\nOs resultados expressos são do tipo IEnumerable, somente leitura e iterável"); 
 
+
+
 Console.Read();

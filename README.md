@@ -136,6 +136,11 @@ Language-Integrated Query (LINQ) é o nome de um conjunto de tecnologias com base
 - Algumas operações de consulta, como Count ou Max, não têm cláusula de expressão de consulta equivalente e, portanto, devem ser expressas como uma chamada de método. A sintaxe do método pode ser combinada com a sintaxe de consulta de várias maneiras. 
 - As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. As consultas IEnumerable< T > são compiladas para representantes. As consultas IQueryable e IQueryable < T > são compiladas para árvores de expressão. Para obter mais informações, consulte Árvores de expressão.
 
+### Deffered Execution (Execução Adiada)
+
+É o método de execução da consultas LINQ, em que a avaliação de uma expressão é postergada áté que seu valor realizado seja realmente necessário (*foreach*, Count, Sum,...). <br> 
+Basicamente, a operação somente ocorrerá quando houver a iteração.
+
 ### Esquema básico de consultas
 
 1. Definir a fonte de dados;
@@ -148,4 +153,6 @@ As consultas LINQ usam *métodos de extensão* para classes que implementam a inte
 
 - `IEnumerable` : Comumente base para coleções que podem ser iteradas/percorridas, como `List<T>`, `ArrayList<T>`, `Dictionary`;
 - `IQueryable` : Representa coleções de objetos que podem ser consultados usando fontes de dados externa, como um banco de dados;
+
+## Consultas LINQ
 
