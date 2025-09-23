@@ -126,3 +126,4 @@ Métodos de extensão são métodos estáticos, mas são chamados como se fossem métod
 **São muito usados juntamente com a LINQ, pois permite criar métodos que permitem com que determinados tipos, que originalmente não poderiam trabalhar com a LINQ, agora consigam incrementar funcionalidades do tipo**
 
 ## LINQ
+
