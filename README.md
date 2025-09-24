@@ -112,3 +112,10 @@ Fornece métodos estáticos para a criação, cópia, exclusão, movimentação 
 | IsolatedStorageException | Lançada quando ocorre um erro em operações de **armazenamento isolado**. |
 | UnauthorizedAccessException | Embora derive de `SystemException`, é frequentemente relacionada a I/O: lançada quando o sistema não tem permissão de acesso ao arquivo ou diretório. |
 | NotSupportedException | Também não é filha direta de `IOException`, mas frequentemente lançada em I/O quando uma operação não é suportada para o formato ou fluxo usado. |
+
+## Classe FileInfo
+
+Trata-se de uma classe utilizada para obter informações detalhadas sobre um arquivo específico, como seu tamanho, nome, data de criação, data de modificação, entre outros. Ela também permite realizar operações em um arquivo, como abrir, copiar, mover um arquivo. <br> Mas diferentemente da classe `File`, ela necessita de uma *instância de classe* para realizar suas operações.
+
+**Recomenda-se o uso do `Refresh` após recuperar as informações de um arquivo, pois essas informações são armazenadas em cache. Logo, necessita atualizar esse cache antes de obter as informações mais recentes**
+
