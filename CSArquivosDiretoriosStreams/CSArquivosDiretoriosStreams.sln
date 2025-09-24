@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassFileInfo", "ClassFileI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Directory", "Directory\Directory.csproj", "{DECFCFA7-9B54-4A54-8D87-192D5C6D84A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryInfo", "DirectoryInfo\DirectoryInfo.csproj", "{918FA3D4-CA21-44D0-96FF-81101E399836}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DECFCFA7-9B54-4A54-8D87-192D5C6D84A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DECFCFA7-9B54-4A54-8D87-192D5C6D84A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DECFCFA7-9B54-4A54-8D87-192D5C6D84A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918FA3D4-CA21-44D0-96FF-81101E399836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918FA3D4-CA21-44D0-96FF-81101E399836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918FA3D4-CA21-44D0-96FF-81101E399836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918FA3D4-CA21-44D0-96FF-81101E399836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
