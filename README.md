@@ -158,7 +158,7 @@ Funciona semelhantemente à classe `File`, pois fornece métodos estáticos para
 | SetLastWriteTime(String, DateTime) | Define a última data/hora de modificação. |
 | SetLastWriteTimeUtc(String, DateTime) | Define a última data/hora de modificação em UTC. |
 
-### Exceções do tipo Directory
+### Exceções do tipo DirectoryInfo
 
 | Exceção | Descrição |
 |---------|-----------|
