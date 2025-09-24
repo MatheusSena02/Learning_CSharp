@@ -119,3 +119,54 @@ Trata-se de uma classe utilizada para obter informações detalhadas sobre um ar
 
 **Recomenda-se o uso do `Refresh` após recuperar as informações de um arquivo, pois essas informações são armazenadas em cache. Logo, necessita atualizar esse cache antes de obter as informações mais recentes**
 
+## Directory 
+
+Funciona semelhantemente à classe `File`, pois fornece métodos estáticos para a criação, cópia, exclusão, movimentação e abertura, mas tratando-as em relação aos **diretórios** de um diretório.
+
+| Método | Descrição |
+|--------|-----------|
+| CreateDirectory(String) | Cria todos os diretórios e subdiretórios no caminho especificado, a menos que já existam. |
+| CreateDirectory(String, UnixFileMode) | Cria diretórios/subdiretórios no caminho especificado com permissões definidas, a menos que já existam. |
+| CreateSymbolicLink(String, String) | Cria um link simbólico de diretório que aponta para outro caminho. |
+| CreateTempSubdirectory(String) | Cria um diretório vazio e exclusivo dentro do diretório temporário do usuário atual. |
+| Delete(String) | Exclui um diretório vazio de um caminho especificado. |
+| Delete(String, Boolean) | Exclui o diretório especificado e, opcionalmente, todos os arquivos e subdiretórios dentro dele. |
+| EnumerateDirectories(...) | Retorna uma coleção enumerável de nomes completos de diretórios em um caminho especificado (suporta padrão de pesquisa e opções). |
+| EnumerateFiles(...) | Retorna uma coleção enumerável de nomes completos de arquivos em um caminho especificado (suporta padrão de pesquisa e opções). |
+| EnumerateFileSystemEntries(...) | Retorna uma coleção enumerável de arquivos e diretórios em um caminho especificado (suporta padrão de pesquisa e opções). |
+| Exists(String) | Verifica se um caminho especificado se refere a um diretório existente. |
+| GetCreationTime(String) | Obtém a data e hora de criação de um diretório. |
+| GetCreationTimeUtc(String) | Obtém a data e hora de criação em formato UTC. |
+| GetCurrentDirectory() | Retorna o diretório de trabalho atual do aplicativo. |
+| GetDirectories(...) | Retorna os subdiretórios de um diretório especificado (suporta padrão de pesquisa e opções). |
+| GetDirectoryRoot(String) | Retorna as informações da raiz (volume/unidade) do caminho especificado. |
+| GetFiles(...) | Retorna os arquivos de um diretório (suporta padrão de pesquisa e opções). |
+| GetFileSystemEntries(...) | Retorna todos os arquivos e subdiretórios em um caminho (suporta padrão de pesquisa e opções). |
+| GetLastAccessTime(String) | Retorna a última data/hora de acesso ao diretório. |
+| GetLastAccessTimeUtc(String) | Retorna a última data/hora de acesso ao diretório em UTC. |
+| GetLastWriteTime(String) | Retorna a última data/hora de modificação do diretório. |
+| GetLastWriteTimeUtc(String) | Retorna a última data/hora de modificação em UTC. |
+| GetLogicalDrives() | Retorna as unidades lógicas do computador (ex.: "C:\\", "D:\\"). |
+| GetParent(String) | Retorna o diretório pai do caminho especificado. |
+| Move(String, String) | Move um diretório (e seu conteúdo) para um novo local. |
+| ResolveLinkTarget(String, Boolean) | Obtém o destino de um link simbólico. |
+| SetCreationTime(String, DateTime) | Define a data e hora de criação do diretório. |
+| SetCreationTimeUtc(String, DateTime) | Define a data e hora de criação em UTC. |
+| SetCurrentDirectory(String) | Define o diretório de trabalho atual do aplicativo. |
+| SetLastAccessTime(String, DateTime) | Define a última data/hora de acesso. |
+| SetLastAccessTimeUtc(String, DateTime) | Define a última data/hora de acesso em UTC. |
+| SetLastWriteTime(String, DateTime) | Define a última data/hora de modificação. |
+| SetLastWriteTimeUtc(String, DateTime) | Define a última data/hora de modificação em UTC. |
+
+### Exceções do tipo Directory
+
+| Exceção | Descrição |
+|---------|-----------|
+| UnauthorizedAccessException | O chamador não tem a permissão necessária para acessar ou modificar o diretório. |
+| ArgumentNullException | O caminho informado é `null`. |
+| ArgumentException | O caminho informado está vazio, contém apenas espaços em branco ou caracteres inválidos. |
+| PathTooLongException | O caminho ou nome do diretório excede o comprimento máximo definido pelo sistema. |
+| DirectoryNotFoundException | O caminho especificado é inválido (por exemplo, diretório inexistente). |
+| IOException | Ocorreu um erro de E/S ao acessar o diretório (por exemplo, tentar excluir um diretório que não está vazio sem a flag apropriada). |
+| NotSupportedException | O caminho contém um formato inválido (como dois-pontos no meio, etc.). |
+| SecurityException | O chamador não tem permissão de segurança suficiente para acessar o diretório. |
